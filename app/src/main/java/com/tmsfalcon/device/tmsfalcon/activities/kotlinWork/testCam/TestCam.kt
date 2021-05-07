@@ -25,7 +25,7 @@ class TestCam : AppCompatActivity() {
     private val REQUEST_CODE = 99
     private val REQUEST_CAMERA_PERMISSION = 12
 
-
+// yuvraj
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_cam)
