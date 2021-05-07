@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "121809561063",
+    "firebase_url": "https://tmsfalcon-bc378.firebaseio.com",
+    "project_id": "tmsfalcon-bc378",
+    "storage_bucket": "tmsfalcon-bc378.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121809561063:android:f22496c54f2055a0",
+        "android_client_info": {
+          "package_name": "com.tmsfalcon.device.tmsfalcon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121809561063-uaobgn5k03cepr7abfitqosmjoqf8dh2.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "121809561063-uaobgn5k03cepr7abfitqosmjoqf8dh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnsvnegJ-ApenzezbdjH_GnpA7YdxgJKQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

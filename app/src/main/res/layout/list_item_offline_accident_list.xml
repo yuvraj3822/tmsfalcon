@@ -1,0 +1,156 @@
+<LinearLayout android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/curved_top_shape"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/loan_date"/>
+                <TextView
+                    android:id="@+id/accident_date_textview"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:backgroundTint="@color/white_greyish"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_access_time_black_24dp"/>
+                <TextView
+                    android:id="@+id/accident_time_textview"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:background="@color/loan_second_block"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/status_circle_image"
+                    android:layout_width="12dp"
+                    android:backgroundTint="@color/white_greyish"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:id="@+id/accident_status_textview"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:backgroundTint="@color/white_greyish"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_location_on_black_24dp"/>
+                <TextView
+                    android:id="@+id/accident_location_textview"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:weightSum="2"
+            android:background="@drawable/curved_bottom_shape"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/accident_update_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/update"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_16"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_greyish"/>
+
+            <TextView
+                android:id="@+id/accident_upload_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/upload"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_16"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<RelativeLayout android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/capture_content_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/upcomingTripsListView"
+        android:divider="@color/timeline_line"
+        android:dividerHeight="1.0sp"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/black_transparent"
+        android:layout_height="35dp">
+        <TextView
+            android:id="@+id/footer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_greyish"
+            android:textSize="@dimen/text_14"
+            android:text="Showing 5 of 120 Records."/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_data_textview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/white_greyish"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_available"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
+

@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+    <!--<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_capture_document"/>-->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/header_phone_icon" />
+            <TextView
+                android:id="@+id/header_text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textAllCaps="true"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_greyish"
+                android:text="@string/ringcentral"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_block"
+        android:visibility="gone"
+        android:layout_below="@id/header_layout"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/border_dark_blue"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/phone"
+                android:layout_width="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="18dp" />
+            <TextView
+                android:text="@string/phone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/blue_logo"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_16"
+                  android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=":"
+                android:textColor="@color/blue_logo"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/text_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ringcentral_phone"
+                android:text="@string/phone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white_greyish"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/extension"
+                android:layout_width="18dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="18dp" />
+            <TextView
+                android:text="@string/extension"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/blue_logo"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text=":"
+                android:textColor="@color/blue_logo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/ringcentral_extension"
+                android:text="@string/phone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white_greyish"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/call_request_layout"
+        android:layout_below="@id/main_block"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_border_filled_curved"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/header_phone_icon" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_18"
+            android:textColor="@color/white_greyish"
+            android:text="@string/call_request"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_data_textview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/white_greyish"
+        android:layout_height="wrap_content"
+        android:text="@string/no_ringcentral_integrated"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

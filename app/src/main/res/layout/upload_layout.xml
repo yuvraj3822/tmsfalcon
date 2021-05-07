@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+    <!-- <include
+         android:id="@+id/toolbar"
+         layout="@layout/toolbar_capture_document"/>-->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/white_greyish"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/white_greyish"
+                android:background="@drawable/ic_cloud_upload_black_24dp" />
+            <TextView
+                android:id="@+id/header_text"
+                android:paddingTop="10dp"
+                android:textAllCaps="true"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_greyish"
+                android:text="@string/upload_accident_report"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/capture_content_color_similar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_15"
+                        android:textAlignment="center"
+                        android:text="@string/accident_report_final_screen_line_one"/>
+
+
+                    <ImageView
+
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/upload_server"
+                        android:id="@+id/upload_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+
+                    <Button
+                        android:id="@+id/upload_now"
+                        android:layout_width="130dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/blue_border_filled_curved"
+                        android:text="@string/upload_now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_14" />
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,787 @@
+<resources>
+    <string name="app_name">TmsFalcon</string>
+    <string name="hint_username"> Username</string>
+    <string name="hint_password"> Password</string>
+    <string name="login_text">Login</string>
+    <string name="submit_text">Submit</string>
+    <string name="forgot_password_text">Forgot Password ?</string>
+    <string name="network_error">Please Connect to the Internet Connection.</string>
+    <string name="username_error">Username cannot be blank.</string>
+    <string name="password_error">Password cannot be blank.</string>
+    <string name="null_response">No Response</string>
+    <string name="malformed_json">Could not parse malformed JSON</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="login_successful">Login Successful.</string>
+    <string name="login_db_error">Some Error Occurred while inserting data to db.</string>
+    <string name="backtologin">Back to Login</string>
+    <string name="title_activity_should_update_password">ShouldUpdatePassword</string>
+    <string name="update_password">Update Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password_error">New Password Field is Required</string>
+    <string name="confirm_password_error">Confirm Password Field is Required</string>
+    <string name="should_update_password_text_view">Please Update Your Password First.</string>
+    <string name="password_equality_error">Confirm Password must Match New Password.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="company_name">Company Name<font color="#FFFFFF">*</font></string>
+    <string name="company_address">Company Address</string>
+    <string name="company_ein">Company Ein</string>
+
+    <string name="title">Title</string>
+
+    <string name="username">Username</string>
+    <string name="gender">Gender</string>
+    <string name="dob">Date Of Birth</string>
+    <string name="email">Email<font color="#FFFFFF">*</font></string>
+    <string name="type">Type<font color="#FFFFFF">*</font></string>
+    <string name="type_plane">Type</string>
+<!--    <string name="mc_no">MC No</string>-->
+
+    <string name="mc_no">MC No<font color="#FFFFFF">*</font></string>
+
+
+    <string name="dl">DL</string>
+    <string name="dl_state">DL State</string>
+    <string name="dl_expiration">DL Expiration</string>
+    <string name="home_phone">Home Phone</string>
+
+    <string name="address">Address<font color="#FFFFFF">*</font></string>
+    <string name="address_detail">City,State,Zipcode</string>
+    <string name="home_address">Home Address<font color="#FFFFFF">*</font></string>
+    <string name="mailing_address">Mailing Address<font color="#FFFFFF">*</font></string>
+
+
+    <string name="emergency_contact_person"> Contact Person</string>
+    <string name="emergency_contact_relation"> Contact Relation</string>
+    <string name="emergency_contact_cell"> Phone Number</string>
+    <string name="general_information">General Information</string>
+    <string name="company_information">Company Information</string>
+    <string name="driving_information">Driving License Information</string>
+    <string name="emergency_contact_information">Emergency Contact Information</string>
+    <string name="employer_name">Employer Name </string>
+    <string name="position">Position </string>
+    <string name="duration">Duration </string>
+    <string name="equipment_type">Equipment type  </string>
+    <string name="equipment_class">Equipment Class  </string>
+    <string name="total_miles">Total Miles  </string>
+    <string name="conviction_date">Conviction Date </string>
+    <string name="location">Location </string>
+    <string name="charge">Charge </string>
+    <string name="penalty">Penalty </string>
+    <string name="accident_nature">Accident Nature </string>
+    <string name="accident_date">Accident Date </string>
+    <string name="fatalities">Fatalities </string>
+    <string name="injuries">Injuries </string>
+    <string name="fax">Fax </string>
+    <string name="salary">Salary </string>
+    <string name="leaving_reason">Leaving Reason </string>
+    <string name="mc">MC </string>
+    <string name="resources">Resources</string>
+    <string name="trucks">Trucks</string>
+    <string name="trailers">Trailers</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="title_activity_truck_detail">Truck Detail</string>
+    <string name="unit_no">Unit No<font color="#FFFFFF">*</font></string>
+    <string name="current_location">Current Location</string>
+    <string name="model">Model</string>
+    <string name="make">Make</string>
+    <string name="year">Year</string>
+    <string name="color">Color</string>up
+    <string name="license_plate_number">License Plate Number</string>
+    <string name="license_expiration">License Expiration</string>
+    <string name="resgistered_state">Registered State</string>
+    <string name="city_state">City/State</string>
+    <string name="zipcode">Zipcode<font color="#FFFFFF">*</font></string>
+    <string name="available_date">Available Date</string>
+    <string name="latitude_longitude">Latitude/Longitude</string>
+    <string name="location_">Location</string>
+    <string name="vehicle_details">Vehicle Details</string>
+
+    <string name="trailer_details">Trailer Details</string>
+
+
+    <string name="truck_basic">Truck Profile Details</string>
+    <string name="vin">VIN</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="no_of_axles">No of Axles</string>
+    <string name="gross_weight">Gross Weight</string>
+    <string name="current_odometer">Current Odometer</string>
+    <string name="current_ewh">Current EWH</string>
+    <string name="tank_capacity">Tank Capacity</string>
+    <string name="tank_reserve">Tank Reserve</string>
+    <string name="front_tyre_size">Front Tyre Size</string>
+    <string name="rear_tyre_size">Rear Tyre Size</string>
+    <string name="description">Description<font color="#FFFFFF">*</font></string>
+    <string name="description_plane">Description</string>
+
+    <string name="damage_description">Damage Description<font color="#FFFFFF">*</font></string>
+
+    <string name="insurance_details">Insurance Details</string>
+    <string name="insurance_name">Insurance Name</string>
+    <string name="insurance_expiration">Insurance Expiration</string>
+    <string name="insurance_policy_name">Insurance Company Name<font color="#FFFFFF">*</font></string>
+    <string name="excluded_state">Excluded State</string>
+    <string name="weight_capacity">Weight Capacity</string>
+    <string name="title_activity_trailer_detail">Trailer Detail</string>
+    <string name="trailer_basic">Trailer Profile Details</string>
+    <string name="trailer_group">Trailer Group</string>
+    <string name="trailer_type">Trailer Type</string>
+    <string name="max_weight">Max Weight</string>
+    <string name="max_pallets">Max Pallets</string>
+    <string name="length">Length</string>
+    <string name="length_dimension">Length Dimension</string>
+    <string name="width">Width</string>
+    <string name="width_dimension">Width Dimension</string>
+    <string name="tyre_size_width">Tyre Size (Tyre Width)</string>
+    <string name="tyre_size_section_height">Tyre Size (Section Height)</string>
+    <string name="tyre_size_rim_diameter">Tyre Size (Rim Diameter)</string>
+    <string name="view">View</string>
+    <string name="document_name">Name</string>
+    <string name="document_type">Type</string>
+    <string name="document_tracking">Tracking</string>
+    <string name="close">Close</string>
+    <string name="name">Name<font color="#FFFFFF">*</font></string>
+    <string name="phone_no">Phone No.<font color="#FFFFFF">*</font></string>
+    <string name="alternative_fax">Alternative Fax</string>
+    <string name="state_country">State/Country</string>
+    <string name="day_off_request">Day Off Request</string>
+    <string name="enter_reason">Enter Reason</string>
+    <string name="full_day">Full Day</string>
+    <string name="half_day">Half Day</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="day_off_type">Off Type</string>
+    <string name="date_error">Date is Required.</string>
+    <string name="reason_error">Reason is Required.</string>
+    <string name="start_time_error">Start Time is Required.</string>
+    <string name="end_time_error">End Time is Required.</string>
+    <string name="loans">Loans</string>
+    <string name="start_date">Start Date</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="last_installment">Last Installment</string>
+    <string name="installment_amount">Installment Amount</string>
+    <string name="installments">Installments</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="notes">Notes</string>
+    <string name="payment_schedule">Payment Schedule</string>
+    <string name="fuel_rebates">Fuel Rebates</string>
+    <string name="rebate_schedule">Rebate Schedule</string>
+    <string name="rebate_per_gallon">Rebate Per Gallon</string>
+    <string name="document_requests">Document Requests</string>
+    <string name="document_due_date">Due Date</string>
+    <string name="document_code">Code</string>
+    <string name="upload">Upload</string>
+    <string name="capture_document">Capture Document</string>
+    <string name="select_document">Scan Document</string>
+
+    <string name="title_activity_crop">CropActivity</string>
+    <string name="yes_crop">Yes, crop!</string>
+    <string name="no_redo">No, redo.</string>
+    <string name="next">Next!</string>
+    <string name="next_">Next</string>
+
+
+    <string name="next_without_exclamation">Next</string>
+    <string name="token_error">Token is Expired. Please Login Again.</string>
+    <string name="add_new">Add New</string>
+    <string name="ok">OK</string>
+    <string name="upload_all">Upload All</string>
+    <string name="respond">Respond</string>
+    <string name="no_flash_available">Your Device does not support flash.</string>
+    <string name="no_data_in_table">No Records Available in Table to Upload.</string>
+    <string name="title_activity_uploaded_documents">Uploaded Documents</string>
+    <string name="title_activity_view_pdf">ViewPdf</string>
+    <string name="fax_icon">Fax</string>
+    <string name="cancel">Cancel</string>
+    <string name="upload_by_email">Upload Documents by Email</string>
+    <string name="upload_by_fax">Upload Documents by Fax</string>
+    <string name="logout">Logout</string>
+    <string name="dispatch">Dispatch</string>
+    <string name="date">Date<font color="#FFFFFF">*</font></string>
+    <string name="reason">Reason</string>
+    <string name="time">Time<font color="#FFFFFF">*</font></string>
+    <string name="timeone">Time</string>
+
+    <string name="lights_on">Lights On</string>
+    <string name="lights_off">Lights Off</string>
+    <string name="my_loads">My Loads</string>
+    <string name="navigation">Navigation</string>
+    <string name="profile">Profile</string>
+    <string name="uploads">Uploads</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="new_password_regex_error">You must have one uppercase, one special character or one number.</string>
+    <string name="no_dispatcher_assigned">No Dispatcher Assigned.</string>
+    <string name="trip_no">Trip No</string>
+    <string name="origin">Origin</string>
+    <string name="distance">Distance:</string>
+    <string name="destination">Destination</string>
+    <string name="stops">Stops:</string>
+    <string name="title_activity_trip_detail">TripDetail</string>
+    <string name="total_settlement_amount">Total Settlement Amount</string>
+    <string name="settlement_date">Settlement Date</string>
+    <string name="endorsements">Endorsements</string>
+    <string name="request_day_off">Request Day Off</string>
+    <string name="show_requests">Show Requests</string>
+    <string name="view_previous">View Doc</string>
+    <string name="channel_name_location_service">Oreo Location Channel</string>
+    <string name="channel_name_gps_tracker_service">Oreo Gps Tracker Channel</string>
+    <string name="channel_description_location_service">This Channel is created so that this app works fine when fetching location of a driver on version Oreo and above.</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="no">No</string>
+    <string name="not_sure">Not sure</string>
+
+    <string name="yes">Yes</string>
+    <string name="gps_not_found_title">Enable Location</string>
+    <string name="gps_not_found_message">Please Enable Location Service.</string>
+    <string name="day_off_requests">Day Off Requests</string>
+    <string name="phone">Phone</string>
+    <string name="ringcentral">Ringcentral</string>
+    <string name="extension">Extension</string>
+    <string name="no_ringcentral_integrated">No Ringcentral Integrated</string>
+    <string name="details">Details</string>
+    <string name="first_payment_due">First Payment due</string>
+    <string name="loan_date">Loan Date</string>
+    <string name="interest">Interest</string>
+    <string name="total_interest_due">Total Interest Due</string>
+    <string name="last_payment_due">Last Payment Due</string>
+    <string name="payment">Payment</string>
+    <string name="principal">Principal</string>
+    <string name="principal_left">Principal Left</string>
+    <string name="status">Status</string>
+    <string name="view_settlement">View Settlement</string>
+    <string name="late_payment_charges">Late Payment Charges</string>
+    <string name="compound_interest">Compound Interest</string>
+    <string name="annual_interest_rate">Annual Interest Rate</string>
+    <string name="payment_frequency">Payment Frequency</string>
+    <string name="no_payments">No of Payments</string>
+    <string name="periodic_payment">Periodic Payment</string>
+    <string name="payments">Payments</string>
+    <string name="expired_documents">Expired Documents</string>
+    <string name="details_for_year">Details for year</string>
+    <string name="maximum_limit_exceed">Maximum documents limit has reached. You can upload maximum 8 documents.</string>
+    <string name="single">Single</string>
+    <string name="multiple">Multiple</string>
+    <string name="days_off">Days Off</string>
+    <string name="end_date">End Date</string>
+    <string name="select_start_date">Select Start Date</string>
+    <string name="end_date_error">End Date is required.</string>
+    <string name="violation">Violation</string>
+    <string name="start">Start</string>
+    <string name="gallery">Gallery</string>
+
+    <string name="end">End</string>
+    <string name="code">Code</string>
+    <string name="source">Source</string>
+    <string name="first_on">First On</string>
+    <string name="last_on">Last On</string>
+    <string name="renew">Renew</string>
+    <string name="title_activity_navigation_base">Base Activity</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="make_a_call">Make A Call</string>
+
+    <string name="select_or_search">Select or Search</string>
+
+    <string name="call_request">Call Request</string>
+
+    <string name="contacts">Contacts</string>
+    <string name="no_contacts_found">No Contacts Found</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="aestrick">*</string>
+    <string name="hash">#</string>
+    <string name="abc">ABC</string>
+    <string name="def">DEF</string>
+    <string name="ghi">GHI</string>
+    <string name="jkl">JKL</string>
+    <string name="mno">MNO</string>
+    <string name="pqrs">PQRS</string>
+    <string name="tuv">TUV</string>
+    <string name="wxyz">WXYZ</string>
+    <string name="plus">+</string>
+    <string name="select_document_type">Please Select Document Type</string>
+    <string name="load">Load</string>
+    <string name="driver">Driver</string>
+    <string name="truck">Truck</string>
+    <string name="trailer">Trailer</string>
+
+    <string name="truck_trailer">Truck and Trailer</string>
+
+
+    <string name="get_types">Get Types</string>
+    <string name="recents">Recents</string>
+    <string name="captured_documents">Captured Documents</string>
+    <string name="enter_your_message_here">Enter Your Message here.</string>
+    <string name="no_url_exist">Cannot open file as Url does not exist.</string>
+    <string name="shortcut_disabled_message">This Shortcut is disabled.</string>
+    <string name="import_file">Import File</string>
+    <string name="dnd">Do not Disturb</string>
+    <string name="not_available">Not Available</string>
+    <string name="available">Available</string>
+    <string name="dnd_info_text">When Do Not Disturb is enabled, calls and notifications will not disturb you.</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="last_load">Last Load</string>
+    <string name="pickup">Pickup</string>
+    <string name="delivery">Delivery</string>
+    <string name="settlement">Settlement</string>
+    <string name="amount">Amount</string>
+    <string name="voicemails">Voicemails</string>
+    <string name="send_email">Send Email</string>
+    <string name="send">Send</string>
+
+    <string name="push_notifications">Push Notifications</string>
+    <string name="off">Off</string>
+    <string name="notification_info_text">When Push Notification is disabled,notifications will not disturb you.</string>
+    <string name="finding_rect">Use darker background</string>
+
+    <string name="move_away">Move away</string>
+    <string name="move_closer">Move closer</string>
+    <string name="adjust_angle">Adjust angle</string>
+    <string name="hold_still">Hold still</string>
+    <string name="rejected_document_overview">Rejected Document Overview</string>
+    <string name="rejected_on">Rejected On</string>
+    <string name="rejected_reason">Rejected Reason</string>
+    <string name="settlements">Settlements</string>
+    <string name="settlement_amount">Settlement Amount</string>
+    <string name="load_board">Load Board</string>
+    <string name="price">Price</string>
+    <string name="price_per_mile">Price Per Mile</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="sort_by">Sort By</string>
+    <string name="closed">Closed</string>
+    <string name="miles">Miles</string>
+    <string name="open">Open</string>
+    <string name="all">All</string>
+    <string name="settings">Settings</string>
+    <string name="mark_available">Mark As Available</string>
+    <string name="length_trailer_filter_text">In feet only show available apace in trailer</string>
+    <string name="tooltip_width_trailer_filter_text">In inches show available space in trailer</string>
+    <string name="radius">Radius</string>
+    <string name="pick_up_date">Pick Up Date</string>
+    <string name="pick_up_end_date">Pick Up End Date</string>
+    <string name="delivery_date">Delivery Date</string>
+    <string name="delivery_end_date">Delivery End Date</string>
+    <string name="advance_filters">Advance Filters</string>
+    <string name="limits">Limits</string>
+    <string name="min_per_mile">Min Per Mile</string>
+    <string name="display_load_not_having_rate">Display load not having rate</string>
+    <string name="max_miles">Max miles</string>
+    <string name="agent">Agent</string>
+    <string name="escrow_acounts">Escrow Accounts</string>
+    <string name="accounting">Accounting</string>
+    <string name="balance">Balance</string>
+    <string name="opening_balance">Opening Balance</string>
+    <string name="periodic_amount">Periodic Amount</string>
+    <string name="schedule_id">Schedule Id</string>
+    <string name="id">Id</string>
+    <string name="add_destination">Add Destination</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="fuel_transaction">Fuel Transaction</string>
+    <string name="fuel_station">Fuel Station</string>
+    <string name="rebate_amount">Rebate Amount</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="paid_loan_amount">Paid Loan Amount</string>
+    <string name="date_time"><![CDATA[Date & Time]]></string>
+    <string name="settled_at">Settled At</string>
+    <string name="enter_state_city">Enter State or City</string>
+    <string name="enter_zipcode">Enter Zipcode</string>
+    <string name="get_cash">Get Cash</string>
+    <string name="history">History</string>
+    <string name="comdata_code">Com Data Code</string>
+    <string name="click_to_copy">Click the code to copy</string>
+    <string name="cash_history">Cash History</string>
+    <string name="cash_for">Cash for</string>
+    <string name="issued_date">Issued Date</string>
+    <string name="view_code">View Code</string>
+    <string name="rc_embed">RC Embed</string>
+    <string name="about_us">About us</string>
+    <string name="app_tour">App Tour</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="whats_new">What\'s New</string>
+    <string name="send_feedback_email">Send Feedback Email</string>
+    <string name="about">About</string>
+    <string name="enter_subject">Enter Subject</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="load_board_preferences">Load Board Preferences</string>
+    <string name="post_age">Post Age</string>
+    <string name="post_truck_search_loads"><![CDATA[Post Truck & Search for Loads]]></string>
+    <string name="length_hint">Length (In Feet)</string>
+    <string name="weight_hint">Weight (In Pounds)</string>
+    <string name="send_by_fax">Send Documents by Fax</string>
+    <string name="send_by_email">Send Documents by Email</string>
+    <string name="report_accident_incident">Report Accident/Incident</string>
+    <string name="accident_report">Accident Report</string>
+
+    <string name="report_accident">Accident/Incident Details</string>
+
+    <string name="report_other_accident">Other Vehicles</string>
+
+
+    <string name="add_vehicle">Add Vehicles</string>
+    <string name="no_add_vehicle">No Vehicles</string>
+
+
+    <string name="add_other_vehicles">Add other vehicles</string>
+
+
+    <string name="stay_calm">Stay Calm</string>
+    <string name="accident_screen_three_line_two">The crash site is a place to gather information, not assign or accept blame.</string>
+    <string name="accident_screen_three_line_one">Do not discuss who was at fault.</string>
+    <string name="driver_information">Driver\'s Information</string>
+    <string name="witness_name">Witness Name<font color="#FFFFFF">*</font></string>
+    <string name="witness_phone">Witness Phone<font color="#FFFFFF">*</font></string>
+    <string name="witness_information">Witness Information</string>
+    <string name="witness_statement">Witness Statement<font color="#FFFFFF">*</font></string>
+    <string name="add_witness">Add Witness</string>
+    <string name="no_witness">No witness</string>
+
+    <string name="accident_screen_six_line_one">If possible, take photos of the accident scene and damage to vehicles, physical evidence, or surrounding structures, but only if you can do so safely.</string>
+    <string name="accident_screen_six_line_two">Photograph the truck and/or trailer, making sure to get any damage, and identifying markings such as DOT numbers, logos, license tags and warnings such as HAZMAT information.</string>
+    <string name="accident_screen_six_line_three">If you are unable to take photographs, then make detailed notes or draw a diagram to record this information.</string>
+    <string name="capture">Capture</string>
+
+    <string name="capture_scene">Capture scene</string>
+
+    <string name="accident_screen_seven_line_one">Report the accident to your insurance company for towing/storing your vehicle, obtaining a rental replacement and arranging for repairs.</string>
+    <string name="accident_screen_seven_line_two">Note where your vehicle will be taken to, if possible. Preserve your car, if you can; it can be important evidence.</string>
+    <string name="accident_screen_eight_line_one">You should honestly report whether you feel injured, but all serious injuries are not immediately apparent during the rush of adrenaline following an accident, so you may want to withhold comments about whether you are injured until you have had the opportunity to be evaluated by a physician, if needed. When in doubt, if you are having any symptoms, it is better to seek medical attention immediately.</string>
+    <string name="accident_screen_eight_line_two">As soon as possible following an accident, you or someone on your behalf needs to write the trucking company (DOT carrier) and request they not destroy any relevant documents, including the driver’s logs. Otherwise, key documents may be destroyed in the months following the accident.</string>
+    <string name="truck_details">Truck Details</string>
+
+
+    <string name="insurance_provider">Insurance Provider</string>
+    <string name="dot_number">DOT Number</string>
+    <string name="vehicle_registration">Vehicle Registration</string>
+    <string name="truck_owner_details">Truck Owner Details</string>
+    <string name="driver_employer_details">Driver\'s Employer Details</string>
+    <string name="capture_proof">Capture Proof</string>
+    <string name="done">Done</string>
+
+    <string name="take_incident_photo">Take Incident Photo or Video</string>
+
+
+    <string name="add_images">Add Images</string>
+
+    <string name="add_images_videos">Add Images / Videos</string>
+
+
+    <string name="incident_details">Incident Details</string>
+    <string name="street_address">Street Address</string>
+    <string name="incident_date">Incident Date</string>
+    <string name="incident_location">Incident Location</string>
+    <string name="incident_time">Incident Time</string>
+    <string name="vehicle_owner_details">Vehicle Owner Details</string>
+
+
+    <string name="add_vehicle_detail">Add Vehicle Detail</string>
+    <string name="accident_module_screen_one_line_one">Your Safety should be your first priority.</string>
+    <string name="step_one">Step 1</string>
+    <string name="accident_module_screen_one_line_two">Move to a secure location, but do not leave the scene of the accident.</string>
+    <string name="step_two">Step 2</string>
+    <string name="accident_module_screen_one_line_three">Do not stand near or between vehicles or near traffic.</string>
+    <string name="step_three">Step 3</string>
+    <string name="accident_module_screen_one_line_four">Put out flares and/or reflectors if you have them.</string>
+    <string name="call_911">CALL 911</string>
+    <string name="accident_module_screen_two_line_one">To summon the police so they can make an objective report.</string>
+    <string name="step_four">Step 4</string>
+    <string name="accident_module_screen_two_line_two">Record Your Incident Report Number</string>
+    <string name="step_five">Step 5</string>
+    <string name="accident_module_screen_two_line_three">Record police officer badge number, name and the police department where that officer works.</string>
+    <string name="tips">Tips</string>
+    <string name="accident_module_screen_three_line_one">Do not discuss who was at fault</string>
+    <string name="accident_module_screen_three_line_two">The crash site is a place to gather information, not assign or accept blame.</string>
+    <string name="step_six">Step 6</string>
+    <string name="gather_photographic_evidence">Gather Photographic Evidence</string>
+
+    <string name="photographic_evidence">Photographic Evidence</string>
+    <string name="no_photographic_evidence">No Photographic Evidence</string>
+
+    <string name="accident_module_screen_six_line_one">Take photos of the accident scene and damage to vehicle,physical evidence or surrounding structures,but only if you can do it safely.</string>
+    <string name="accident_module_screen_six_line_two">Photographs of truck and/or trailer,making sure to get any damage, and identify markings such as DOT numbers,logos,license tags and warnings such as HAZMAT information.</string>
+    <string name="accident_module_screen_six_line_three">If you are unable to take photographs,then make detailed notes or draw a diagram to record this information.</string>
+    <string name="step_seven">Step 7</string>
+    <string name="gather_witness_information">Gather Witness Information</string>
+    <string name="accident_module_screen_five_line_one">Collect the names and phone numbers of witnesses.</string>
+    <string name="accident_module_screen_five_line_two">Ask them what they saw and write down their description.</string>
+    <string name="step_eight">Step 8</string>
+    <string name="collect_information">Collect Information</string>
+    <string name="accident_module_screen_four_line_one">Collect information about the truck driver, including his name, address, phone number, operator license number, state of license, insurance provider, insurance policy number, the truck’s DOT number, vehicle license plate number and vehicle registration.</string>
+    <string name="accident_module_screen_four_line_two">Also collect name, contact information, and insurer information for the truck owner and the truck driver’s employer.</string>
+    <string name="report_accident_insurance_company">Report Accident Insurance Company</string>
+    <string name="accident_module_screen_seven_line_one">Report the accident to your insurance company for towing/storing your vehicle, obtaining a rental replacement and arranging for repairs.</string>
+    <string name="accident_module_screen_seven_line_two">Note where your vehicle will be taken to, if possible. Preserve your car, if you can; it can be important evidence.</string>
+    <string name="final_step">Final Step</string>
+    <string name="accident_module_screen_eight_line_one">You should honestly report whether you feel injured, but all serious injuries are not immediately apparent during the rush of adrenaline following an accident, so you may want to withhold comments about whether you are injured until you have had the opportunity to be evaluated by a physician, if needed. When in doubt, if you are having any symptoms, it is better to seek medical attention immediately.</string>
+    <string name="accident_module_screen_eight_line_two">As soon as possible following an accident, you or someone on your behalf needs to write the trucking company (DOT carrier) and request they not destroy any relevant documents, including the driver’s logs. Otherwise, key documents may be destroyed in the months following the accident.</string>
+    <string name="recording_demo">Recording Demo</string>
+    <string name="stop_recording">Stop Recording</string>
+    <string name="start_recording">Start Recording</string>
+    <string name="stop_playing">Stop Playing</string>
+    <string name="start_playing">Start Playing</string>
+    <string name="accident_details">Accident Details</string>
+    <string name="accident_time">Accident Time</string>
+    <string name="report_issue">Report An Issue</string>
+    <string name="upload_data">Upload Data</string>
+    <string name="upload_accident_report">Upload Accident Report</string>
+    <string name="accident_report_final_screen_line_one">You must be connected with the internet in order to upload the accident report.</string>
+    <string name="upload_now">Upload Now</string>
+    <string name="upload_later">Upload Later</string>
+    <string name="upload_status">Upload Status</string>
+    <string name="accident_witness_information"><![CDATA[Accident & Witness Information : ]]></string>
+    <string name="uploaded">Uploaded</string>
+    <string name="photos">Photos : </string>
+    <string name="accident_report_uploaded_successfully">Accident Report Uploaded Successfully!</string>
+    <string name="accident_report_upload_failed">Accident Report Upload failed ! Try Again.</string>
+    <string name="internet_not_connected">You are not connected with internet.</string>
+    <string name="witness_name_required">Please enter Witness Name.</string>
+    <string name="witness_phone_required">Please enter Witness phone number.</string>
+    <string name="witness_statement_required">Please enter Witness statement.</string>
+    <string name="accident_date_required">Please Enter Accident Date.</string>
+    <string name="accident_time_required">Please enter Accident time.</string>
+    <string name="employer_name_required">Please Enter Employer\'s name.</string>
+    <string name="employer_phone_required">Please enter Employer\'s Phone number.</string>
+    <string name="vehicle_insurance_company_required">Please enter Vehicle Insurance Company.</string>
+    <string name="vehicle_insurance_no_required">Please enter Insurance policy number.</string>
+    <string name="vehicle_license_no_required">Please enter license number.</string>
+    <string name="vehicle_license_state_required">Please enter license State.</string>
+    <string name="upload_later_text">You are not connected to internet.So by clicking \"Upload Later\" data will be uploaded automatically when you connect to internet.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fmcsa_hos_log">FMCSA HOS Log Book Violations :</string>
+    <string name="fmcsa_unsafe_driving_violatons">FMCSA Unsafe Driving Violatons :</string>
+    <string name="fmcsa_vehicle_maintenance_violatons">FMCSA Vehicle Maintenance Violations :</string>
+    <string name="report">Report</string>
+    <string name="state">State<font color="#FFFFFF">*</font></string>
+    <string name="section">Section</string>
+    <string name="resource_type">Resource Type</string>
+    <string name="offline_accident_reports">Offline Accident Reports</string>
+    <string name="update">Update</string>
+    <string name="offline_reported_accidents">Offline Reported Accidents</string>
+    <string name="update_basic_accident_data">Update Basic Accident Data</string>
+    <string name="update_witness_data">Update Witness Data</string>
+    <string name="update_accident_photos">Update Accident Photos</string>
+    <string name="no_accidents">Accident list will be updated soon!(Work on this screen is done. As Api will be updated it will be working :)   )</string>
+    <string name="accident_incident_details">Accident/Incident Details</string>
+    <string name="i_am_reporting">I am Reporting :</string>
+    <string name="an_accident">Accident</string>
+    <string name="an_incident">Incident</string>
+    <string name="accident_description">When people and/or vehicles are involved and on a public road and/or property.</string>
+    <string name="incident_description">Property damage and nobody is hurt.</string>
+    <string name="on_private_property">On Private Property ? </string>
+    <string name="driver_details">Driver Details</string>
+    <string name="driving_for_employer">Driving for Employer ?</string>
+    <string name="vehicle_year">Vehicle Year<font color="#FFFFFF">*</font></string>
+
+    <string name="truck_unit_no">Truck Unit No<font color="#FFFFFF">*</font></string>
+
+    <string name="vehicle_make">Vehicle Make<font color="#FFFFFF">*</font></string>
+    <string name="license_plate_state">License State<font color="#FFFFFF">*</font></string>
+    <string name="license_number">License No<font color="#FFFFFF">*</font></string>
+    <string name="insurance_company">Insurance Company</string>
+    <string name="policy_holder_first_name">Policy holder First name</string>
+    <string name="insurance_phone_no">Insurance Phn No<font color="#FFFFFF">*</font></string>
+
+    <string name="insurance_policy_no">Insurance Policy No<font color="#FFFFFF">*</font></string>
+
+
+    <string name="insurance_email">Insurance Email<font color="#FFFFFF">*</font></string>
+
+    <string name="policy_holder_last_name">Policy holder Last name</string>
+    <string name="same_as_driver">Details same as driver ?</string>+
+
+    <string name="claim_insurance_as">Claim insurance as:
+    </string>
+
+
+    <string name="file_claim_as">File claim as:
+    </string>
+
+
+    <string name="first_name">First name</string>
+
+    <string name="last_name">Last name</string>
+    <string name="city">City<font color="#FFFFFF">*</font></string>
+    <string name="contact">Contact</string>
+    <string name="is_vehicle_towed">Is Vehicled towed ?</string>
+    <string name="tow_details">Tow Details</string>
+
+    <string name="towing_details">Towing Details</string>
+
+
+    <string name="drug_text_mandatory">Note : Drug and Alcohol test of driver is required to close the accident.</string>
+    <!--    Add Damage Details-->
+    <string name="add_damage_detail">ADD Damage/Injury</string>
+    <string name="damage_details">Damage Details</string>
+    <string name="damage_type">Damage Type</string>
+    <string name="report_injury">Report Injury</string>
+    <string name="report_death">Report Death</string>
+    <string name="report_property_damage">Report Property Damage</string>
+    <string name="injured_person_details">Injured Person Details</string>
+    <string name="people_under_casuality">People under casuality<font color="#FFFFFF">*</font></string>
+
+    <!--    <string name="injured_person_property_damage">Injured Person \n Property Damage</string>-->
+    <string name="injured_person_property_damage">Report Damage or Injury</string>
+    <string name="no_injured_person_property_damage">No Damage or Injury reported</string>
+
+    <string name="is_injured">Is Injured?</string>
+    <string name="is_driver">Is Driver?</string>
+    <string name="is_passenger">Is Passenger?</string>
+    <string name="is_bicyclist">Is Bicyclist?</string>
+    <string name="is_pedestrian">Is Pedestrian?</string>
+    <string name="license_plate">License Plate</string>
+    <string name="license_state">License State</string>
+    <string name="policy_no">Policy No</string>
+    <string name="policy_holder_mobno">Phone No</string>
+    <string name="company_name_trailer">Company Name (Trailer)</string>
+    <string name="policy_no_trailer">Policy No (Trailer)</string>
+    <string name="mobile_no_trailer">Mobile No (Trailer)</string>
+    <string name="email_trailer">Email (Trailer)</string>
+
+
+    <string name="owner_details">Owner Details</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="other_party_accident_details">Other Party Accident Details</string>
+    <string name="other_party_vehicle_details">Other Party Vehicle Details</string>
+    <string name="report_damage_details">Report Damage Details</string>
+    <string name="sign_to_report">Sign to Report</string>
+    <string name="sign_report">Sign Report</string>
+
+    <string name="sign_and_upload">Sign &amp; Upload</string>
+
+    <string name="redo">Redo</string>
+    <string name="preview">Preview</string>
+    <string name="skip">Skip</string>
+    <string name="witness_report">Witness Report</string>
+
+    <string name="progress_report">Progress Accident Report</string>
+    <string name="company">Company</string>
+    <string name="select_vehicle">Select Vehicle:</string>
+    <string name="are_you_able_to_get_the_insurance_n_details_of_other_vehicle">Are you able to get the insurance \ndetails of other vehicle?</string>
+    <string name="save">Save</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video Cam</string>
+    <string name="capture_evidence_via">Capture evidence with</string>
+    <string name="yes_its_final">Yes I want to upload</string>
+    <string name="type_or_select_from_list">Type or Select from list</string>
+    <string name="please_enter_the_vehicle_details">Please enter the vehicle details</string>
+    <string name="no_accident_report">No Accident/Incident Report</string>
+    <string name="no_vehicle_list">No Vehicle List</string>
+    <string name="injury">Injury</string>
+    <string name="death">Death</string>
+    <string name="property">Property</string>
+    <string name="no_damage_injury_reported">No Damage or Injury reported</string>
+    <string name="no_damage_injury">NO Damage/Injury</string>
+    <string name="yes_send_to_this_mail">Yes, Send it</string>
+    <string name="no_send_to_other">No, To other email I\'d</string>
+    <string name="attached_doc">Your document is attached</string>
+    <string name="req_doc_message">Requested document is attached</string>
+    <string name="enter_email">abc@xyz.com</string>
+
+
+    <string name="btn_add_contact"><u>Add new contact</u></string>
+    <string name="add_an_accident">Add an Accident</string>
+<!--    <string name="dot_no">DOT No</string>-->
+    <string name="dot_no">DOT No<font color="#FFFFFF">*</font></string>
+
+    <string-array name="rc_status_options">
+        <item>Available</item>
+        <item>Busy</item>
+        <item>Do not disturb</item>
+        <item>Invisible</item>
+    </string-array>
+    <string-array name="accident_types">
+        <item>Backing</item>
+        <item>Right Turn</item>
+        <item>Left Turn</item>
+        <item>Lane Change Side Swipe</item>
+        <item>Rear End Collision</item>
+        <item>Intersection Collision</item>
+        <item>Head-on Collision</item>
+        <item>Struck Stationary Object</item>
+        <item>Overturn</item>
+        <item>Struck Overhead Object</item>
+        <item>JackKnife</item>
+        <item>Hit Pedestrian</item>
+        <item>Passing</item>
+        <item>Dropped Trailer</item>
+        <item>Hit While Parked"</item>
+        <item>Hit While Moving</item>
+        <item>Picked Up Damaged Trailer</item>
+        <item>Mechanical Failure</item>
+        <item>Ran Traffic Control</item>
+        <item>Ran Off Roadway</item>
+        <item>Downgrade Runaway</item>
+        <item>Trailer Breakaway</item>
+        <item>Cargo Spill</item>
+        <item>Fuel Spill</item>
+        <item>Fire</item>
+        <item>Hit Animal</item>
+        <item>Hit Parked Vehicle/Stopped Vehicle</item>
+        <item>Load Shift</item>
+        <item>Theft</item>
+        <item>Rollaway</item>
+        <item>Non Contact</item>
+        <item>Turning</item>
+        <item>Hit By Other Vehicle, Object or Debris</item>
+        <item>Damage to Trailer Doors</item>
+        <item>Sideswipe Opposing</item>
+        <item>Damaged by Shipper/Receiver</item>
+        <item>Sideswipe Merging</item>
+        <item>Hit Moving Vehicle</item>
+        <item>Preventable Accident/Incident</item>
+        <item>Non-Preventable Accident/Incident</item>
+        <item>Forced Other Vehicle Off Road</item>
+        <item>Forced Off Road by Other Vehicle</item>
+        <item>Hit Object in Road</item>
+        <item>Damaged Equipment/Property</item>
+        <item>Vandalism</item>
+        <item>Stuck, needed tow/other</item>
+        <item>Debris Hit Other</item>
+        <item>Alleged Damage</item>
+        <item>U-Turn</item>
+        <item>Rear-Ended by Other</item>
+        <item>Angle Collision</item>
+        <item>Sideswiped by Opposing</item>
+        <item>99 Misc</item>
+    </string-array>
+
+    <string-array name="picture_array">
+        <item>My vehicle</item>
+        <item>Other vehicle</item>
+        <item>Property Damage</item>
+        <item>Skid marks</item>
+        <item>Traffic Sign</item>
+        <item>Accident site</item>
+        <item>Injuries</item>
+        <item>Person</item>
+    </string-array>
+    <string-array name="document_array">
+        <item>Drivers License</item>
+        <item>Insurance</item>
+        <item>Registration</item>
+        <item>Inspection</item>
+        <item>Report</item>
+        <item>Permit</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dimen_15"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/capture_content_color_block">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_greyish"
+            android:padding="5dp"
+            android:text="@string/insurance_details"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textColor="@color/white_greyish"
+            android:textSize="@dimen/text_14"
+            android:text="@string/are_you_able_to_get_the_insurance_n_details_of_other_vehicle"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/insurance_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white_greyish"
+            android:text="@string/yes"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/other_insurance_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/spinner_custom_rectangle">
+
+            <!-- INPUT -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:hint="@string/insurance_policy_name"
+                android:theme="@style/CustomTextInput"
+                android:textColorHint="@color/light_greyish"
+                android:layout_height="40dp">
+
+                <EditText
+                    android:inputType="textCapWords"
+                    android:id="@+id/automob_insurancename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:background="@color/transparent"
+                    android:textColorHint="@color/light_greyish" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_vehicle_insurance_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red_dark"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone"
+            android:text="@string/vehicle_insurance_company_required"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/spinner_custom_rectangle">
+
+            <!-- INPUT -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:hint="@string/insurance_policy_no"
+                android:theme="@style/CustomTextInput"
+                android:textColorHint="@color/light_greyish"
+                android:layout_height="40dp">
+
+                <EditText
+                    android:id="@+id/vehicle_insurance_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:inputType="textCapWords"
+                    android:background="@color/transparent"
+                    android:textColorHint="@color/light_greyish" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_vehicle_insurance_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red_dark"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone"
+            android:text="@string/vehicle_insurance_no_required"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_marginRight="3dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_custom_rectangle">
+
+                    <!-- INPUT -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:hint="@string/insurance_phone_no"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:layout_height="40dp">
+
+                        <com.vicmikhailau.maskededittext.MaskedEditText
+                            app:mask="(###) ###-####"
+                            android:id="@+id/policy_holder_phone_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_14"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:inputType="numberSigned"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:layout_marginLeft="3dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_custom_rectangle">
+
+                    <!-- INPUT -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:hint="@string/insurance_email"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:layout_height="40dp">
+
+                        <EditText
+                            android:id="@+id/policy_holder_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColor="@color/white_greyish"
+                            android:textColorHint="@color/light_greyish"
+                            android:textSize="@dimen/text_14" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<!--&lt;!&ndash;-->
+<!--   <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@drawable/spinner_custom_rectangle">-->
+
+<!--                    &lt;!&ndash; INPUT &ndash;&gt;-->
+<!--<com.google.android.material.textfield.TextInputLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:padding="5dp"-->
+<!--android:hint="@string/insurance_company"-->
+<!--android:theme="@style/CustomTextInput"-->
+<!--android:textColorHint="@color/light_greyish"-->
+<!--android:layout_height="40dp">-->
+
+<!--<EditText-->
+<!--    android:id="@+id/vehicle_insurance_company"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:textColor="@color/white_greyish"-->
+<!--    android:textSize="@dimen/text_14"-->
+<!--    android:imeOptions="actionNext"-->
+<!--    android:singleLine="true"-->
+<!--    android:background="@color/transparent"-->
+<!--    android:textColorHint="@color/light_greyish" />-->
+<!--</com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    </LinearLayout>-->
+
+<!--<TextView-->
+<!--android:id="@+id/error_vehicle_insurance_company"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:textColor="@color/red_dark"-->
+<!--android:textSize="@dimen/text_14"-->
+<!--android:visibility="gone"-->
+<!--android:text="@string/vehicle_insurance_company_required"/>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_marginTop="15dp"-->
+<!--android:background="@drawable/spinner_custom_rectangle">-->
+
+<!--&lt;!&ndash; INPUT &ndash;&gt;-->
+<!--<com.google.android.material.textfield.TextInputLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:padding="5dp"-->
+<!--    android:hint="@string/insurance_policy_number"-->
+<!--    android:theme="@style/CustomTextInput"-->
+<!--    android:textColorHint="@color/light_greyish"-->
+<!--    android:layout_height="40dp">-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/vehicle_insurance_no"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textColor="@color/white_greyish"-->
+<!--        android:textSize="@dimen/text_14"-->
+<!--        android:imeOptions="actionNext"-->
+<!--        android:singleLine="true"-->
+<!--        android:inputType="text"-->
+<!--        android:background="@color/transparent"-->
+<!--        android:textColorHint="@color/light_greyish" />-->
+<!--</com.google.android.material.textfield.TextInputLayout>-->
+
+<!--</LinearLayout>-->
+
+<!--<TextView-->
+<!--android:id="@+id/error_vehicle_insurance_no"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:textColor="@color/red_dark"-->
+<!--android:textSize="@dimen/text_14"-->
+<!--android:visibility="gone"-->
+<!--android:text="@string/vehicle_insurance_no_required"/>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_marginTop="15dp"-->
+<!--android:layout_weight="2"-->
+<!--android:layout_height="wrap_content">-->
+
+<!--<LinearLayout-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_weight="0.7"-->
+<!--    android:layout_marginRight="3dp"-->
+<!--    android:orientation="vertical">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@drawable/spinner_custom_rectangle">-->
+
+<!--        &lt;!&ndash; INPUT &ndash;&gt;-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:padding="5dp"-->
+<!--            android:hint="@string/policy_holder_first_name"-->
+<!--            android:theme="@style/CustomTextInput"-->
+<!--            android:textColorHint="@color/light_greyish"-->
+<!--            android:layout_height="40dp">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/policy_holder_first_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white_greyish"-->
+<!--                android:textSize="@dimen/text_14"-->
+<!--                android:imeOptions="actionNext"-->
+<!--                android:singleLine="true"-->
+<!--                android:inputType="text"-->
+<!--                android:background="@color/transparent"-->
+<!--                android:textColorHint="@color/light_greyish" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    </LinearLayout>-->
+
+
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_weight="0.7"-->
+<!--    android:layout_marginLeft="3dp"-->
+<!--    android:orientation="vertical">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@drawable/spinner_custom_rectangle">-->
+
+<!--        &lt;!&ndash; INPUT &ndash;&gt;-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:padding="5dp"-->
+<!--            android:hint="@string/policy_holder_last_name"-->
+<!--            android:theme="@style/CustomTextInput"-->
+<!--            android:textColorHint="@color/light_greyish"-->
+<!--            android:layout_height="40dp">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/policy_holder_last_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/transparent"-->
+<!--                android:imeOptions="actionNext"-->
+<!--                android:inputType="text"-->
+<!--                android:singleLine="true"-->
+<!--                android:textColor="@color/white_greyish"-->
+<!--                android:textColorHint="@color/light_greyish"-->
+<!--                android:textSize="@dimen/text_14" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    </LinearLayout>-->
+
+
+<!--</LinearLayout>-->
+
+<!--</LinearLayout>-->
+<!--&ndash;&gt;-->

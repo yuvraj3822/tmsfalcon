@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+
+   <!-- <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_capture_document"/>-->
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ListView
+        android:id="@+id/listViewNotifications"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:divider="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent">
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/no_data_textview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/white_greyish"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_available"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/black_transparent"
+        android:layout_height="35dp">
+        <TextView
+            android:id="@+id/footer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_greyish"
+            android:textSize="@dimen/text_14"
+            android:text="Showing 5 of 120 Records."/>
+    </LinearLayout>
+
+</RelativeLayout>

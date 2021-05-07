@@ -1,0 +1,75 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|left"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90">
+            <TextView
+                android:id="@+id/destination_location_group_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white_greyish"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|left"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90">
+            <TextView
+                android:id="@+id/destination_location_state_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white_greyish"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|left"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90">
+            <TextView
+                android:id="@+id/destination_location_city_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white_greyish"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30">
+            <ImageView
+                android:id="@+id/cancel_icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:onClick="removeView"
+                android:tint="@color/white_greyish"
+                android:src="@drawable/cross"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

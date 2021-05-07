@@ -1,0 +1,79 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/capture_content_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:weightSum="2"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical|left"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/history" />
+                <TextView
+                    android:id="@+id/header_text"
+                    android:paddingTop="10dp"
+                    android:textAllCaps="false"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:text="@string/whats_new"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/header_layout"
+        android:id="@+id/listViewFeatures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:cacheColorHint="@android:color/transparent">
+
+    </ListView>
+
+</RelativeLayout>
+

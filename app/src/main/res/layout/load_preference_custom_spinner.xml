@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:weightSum="3"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_weight="0.4"
+        android:id="@+id/trailer_type_checkbox"
+        android:layout_width="0dp"
+        android:checked="false"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_weight="2.1"
+        android:id="@+id/trailer_type_textview"
+        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:gravity="left|center_vertical"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_greyish"
+        android:textSize="@dimen/text_15"
+        android:text="Demo Text"/>
+
+    <TextView
+        android:layout_weight="0.5"
+        android:layout_gravity="right|center"
+        android:gravity="right|center"
+        android:layout_marginRight="10dp"
+        android:id="@+id/trailer_type_short_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_greyish"
+        android:textSize="@dimen/text_15"
+        android:text="DT"/>
+
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="5"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/image_progress"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+            <ImageView
+                android:id="@+id/document_thumb"
+                android:layout_width="60dp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:layout_height="60dp"
+                android:layout_gravity="center" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3.1"
+        android:layout_marginLeft="7dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/document_name"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:id="@+id/document_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_5"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/document_type"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12" />
+
+            <TextView
+                android:id="@+id/document_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_5"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expiry_date"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:id="@+id/expiry_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_5"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/document_tracking"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+            <View
+                android:id="@+id/status_circle"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_left_5"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_5"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_12"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/viewDocBtn"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:text="@string/view"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/crop_border_color"
+            android:background="@drawable/button_background_overall"
+            android:layout_height="30dp"
+            android:textAllCaps="false"/>
+       <!-- <Button
+            android:id="@+id/viewDocBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_14"
+            android:background="@drawable/ic_visibility_white_24dp"/>-->
+    </LinearLayout>
+
+</LinearLayout>

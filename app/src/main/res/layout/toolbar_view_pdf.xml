@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/toolbar_background"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/pdf_name"
+        android:textSize="@dimen/text_16"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/light_off"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/light_on"
+        android:src="@drawable/headlight_off"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/light_on"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/headlight"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/back_btn"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/back"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

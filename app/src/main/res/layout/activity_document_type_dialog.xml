@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/capture_content_color"
+    tools:context="com.tmsfalcon.device.tmsfalcon.activities.DialogActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue_logo"
+        android:textSize="@dimen/text_18"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:text="@string/select_document_type"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@color/timeline_line"/>
+
+    <RadioGroup
+        android:id="@+id/radioDocumentType"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/load"
+            android:buttonTint="@color/blue_logo" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue_logo"
+            android:text="@string/driver" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioTruck"
+            android:layout_width="wrap_content"
+            android:buttonTint="@color/blue_logo"
+            android:layout_height="wrap_content"
+            android:text="@string/truck" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioTrailer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue_logo"
+            android:text="@string/trailer" />
+
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_red_filled_curved"
+                android:textSize="@dimen/text_14"
+                android:textAllCaps="false"
+                android:textColor="@color/white_greyish"
+                android:text="@string/cancel"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/get_types_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_green_filled_curved"
+                android:textSize="@dimen/text_14"
+                android:textAllCaps="false"
+                android:textColor="@color/white_greyish"
+                android:text="@string/get_types"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

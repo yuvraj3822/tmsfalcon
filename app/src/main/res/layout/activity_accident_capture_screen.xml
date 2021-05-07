@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+    <!-- <include
+         android:id="@+id/toolbar"
+         layout="@layout/toolbar_capture_document"/>-->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/white_greyish"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_warning_black_24dp" />
+            <TextView
+                android:id="@+id/header_text"
+                android:paddingTop="10dp"
+                android:textAllCaps="true"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_greyish"
+                android:text="@string/report_accident_incident"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/header_layout"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dimen_18"
+            android:textColor="@color/white_greyish"
+            android:text="No Photographic evidence List"
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <GridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:stretchMode="columnWidth" >
+
+        </GridView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/capture_content_color_similar"
+            android:layout_margin="3dp"
+            android:layout_height="40dp">
+            <Button
+                android:id="@+id/capture"
+                android:layout_width="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/transparent"
+                android:text="@string/add_images_videos"
+                android:textSize="@dimen/text_14"
+                android:layout_marginBottom="10dp"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:background="@color/capture_content_color_similar"
+            android:layout_height="40dp">
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/transparent"
+                android:text="@string/done"
+                android:textSize="@dimen/text_14"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/text_25"
+        app:cardBackgroundColor="@color/capture_content_color"
+        app:cardCornerRadius="@dimen/dimen_5"
+        app:cardElevation="@dimen/dimen_10"
+        android:id="@+id/info_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<!--            android:layout_marginBottom="@dimen/dimen_20"-->
+<!--            android:layout_marginTop="28dp"-->
+
+            <TextView
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginTop="28dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/text_22"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/info_capture"
+                android:text="Instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+<!--            -->
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_below="@id/info_capture"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_above="@+id/tab_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <com.google.android.material.tabs.TabLayout
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/tab_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/skip"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_greyish"
+                android:textSize="@dimen/text_16"
+                android:textAlignment="center"
+                android:text="@string/skip"/>
+
+            <TextView
+                android:id="@+id/next"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_greyish"
+                android:textSize="@dimen/text_16"
+                android:textAlignment="center"
+                android:text="@string/next_"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>

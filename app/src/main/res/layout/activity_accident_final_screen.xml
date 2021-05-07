@@ -1,0 +1,257 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+    <!-- <include
+         android:id="@+id/toolbar"
+         layout="@layout/toolbar_capture_document"/>-->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/white_greyish"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="@color/white_greyish"
+                android:background="@drawable/ic_cloud_upload_black_24dp" />
+            <TextView
+                android:id="@+id/header_text"
+                android:paddingTop="10dp"
+                android:textAllCaps="true"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_greyish"
+                android:text="@string/upload_accident_report"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/header_layout"
+        android:layout_above="@id/done_btn"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/capture_content_color_similar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_15"
+                        android:textAlignment="center"
+                        android:text="@string/accident_report_final_screen_line_one"/>
+
+                    <Button
+                        android:id="@+id/upload_now"
+                        android:layout_width="130dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/blue_border_filled_curved"
+                        android:text="@string/upload_now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_14" />
+
+                    <Button
+                        android:id="@+id/upload_later"
+                        android:layout_width="130dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="35dp"
+                        android:text="@string/upload_later"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_14"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:background="@drawable/blue_border_filled_curved"/>
+                    <TextView
+                        android:id="@+id/upload_later_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_12"
+                        android:text="@string/upload_later_text"/>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_15"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:text="@string/upload_status"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_15"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/accident_witness_information"/>
+
+                    <TextView
+                        android:id="@+id/accident_data_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_15"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/uploaded"/>
+
+                    <LinearLayout
+                        android:id="@+id/accident_progress_layout"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/margin_view"
+                        android:padding="5dp"
+                        android:weightSum="3"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:background="@color/progress_background_layout"
+                        android:layout_height="wrap_content">
+                        <com.tmsfalcon.device.tmsfalcon.widgets.TextProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:maxHeight="13dip"
+                            android:minHeight="13dip"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:progressTint="@color/colorPrimary"
+                            android:progressBackgroundTint="@color/progress_unfilled"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.8"
+                            android:progress="1"
+                            android:background="@drawable/progress_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_15"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/photos"/>
+
+                    <TextView
+                        android:id="@+id/photos_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_15"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/uploaded"/>
+
+                    <LinearLayout
+                        android:id="@+id/photos_progress_layout"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/margin_view"
+                        android:padding="5dp"
+                        android:weightSum="3"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:background="@color/progress_background_layout"
+                        android:layout_height="wrap_content">
+                        <com.tmsfalcon.device.tmsfalcon.widgets.TextProgressBar
+                            android:id="@+id/photos_progress_bar"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:maxHeight="13dip"
+                            android:minHeight="13dip"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:progressTint="@color/colorPrimary"
+                            android:progressBackgroundTint="@color/progress_unfilled"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.8"
+                            android:progress="1"
+                            android:background="@drawable/progress_background"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/report_status_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green_dark"
+                        android:textSize="@dimen/text_15"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:text="@string/accident_report_uploaded_successfully"/>
+                </LinearLayout>
+
+
+            </com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/done_btn"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/transparent"
+        android:text="@string/done"
+        android:textSize="@dimen/text_18"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,406 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/capture_content_color" >
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/capture_content_color"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <LinearLayout
+                android:id="@+id/header_layout"
+                android:background="@color/toolbar_background"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/timeline_line"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/header_text"
+                        android:paddingTop="10dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_greyish"
+                        android:text="@string/post_truck_search_loads"/>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/timeline_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/body_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_below="@id/header_layout"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/spinner_custom_rectangle"
+                    android:layout_height="wrap_content">
+                    <com.thomashaertel.widget.MultiSpinner
+                        android:id="@+id/trailer_type_spinner"
+                        android:layout_width="match_parent"
+                        android:theme="@style/Spinner"
+                        android:padding="5dp"
+                        android:popupBackground="@color/capture_content_color"
+                        android:backgroundTint="@color/light_greyish"
+                        android:spinnerMode="dropdown"
+                        android:layout_height="45dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="7.4"
+                        android:padding="5dp"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:layout_height="45dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/origin_state_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:maxLines="1"
+                            android:completionThreshold="1"
+                            android:textSize="@dimen/text_14"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                            android:hint="@string/origin" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.6"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:hint="@string/radius"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:layout_height="45dp">
+
+                        <EditText
+                            android:id="@+id/origin_radius_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_14"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                            android:text="150"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="7.4"
+                        android:padding="5dp"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:layout_height="45dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/destination_state_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:maxLines="1"
+                            android:completionThreshold="1"
+                            android:textSize="@dimen/text_14"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                            android:hint="@string/destination" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.6"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:hint="@string/radius"
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:layout_height="45dp">
+
+                        <EditText
+                            android:id="@+id/destination_radius_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_14"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                            android:text="150" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="2"
+                    android:background="@drawable/spinner_custom_rectangle">
+
+                    <!-- INPUT -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/pickup_date_textinput"
+                        android:layout_width="0dp"
+                        android:padding="5dp"
+                        android:layout_weight="1.7"
+                        android:hint="@string/pick_up_date"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:layout_height="45dp">
+
+                        <EditText
+                            android:id="@+id/pick_up_date_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:maxLines="1"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:textSize="@dimen/text_14"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                             />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- ICON -->
+                    <ImageView
+                        android:padding="3dp"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/header_day_off_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="2"
+                    android:background="@drawable/spinner_custom_rectangle">
+
+                    <!-- INPUT -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/pickup_end_date_textinput"
+                        android:layout_width="0dp"
+                        android:padding="5dp"
+                        android:hint="@string/pick_up_end_date"
+                        android:layout_weight="1.7"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:layout_height="45dp">
+
+                        <EditText
+                            android:id="@+id/pick_up_end_date_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:maxLines="1"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:textSize="@dimen/text_14"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- ICON -->
+                    <ImageView
+                        android:padding="3dp"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/header_day_off_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/spinner_custom_rectangle"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/load_type_spinner"
+                        android:layout_width="match_parent"
+                        android:theme="@style/Spinner2"
+                        android:popupBackground="@color/capture_content_color"
+                        android:backgroundTint="@color/white_greyish"
+                        android:spinnerMode="dropdown"
+                        android:layout_height="45dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="8"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:hint="@string/length_hint"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:layout_height="45dp">
+
+                        <EditText
+                            android:id="@+id/length_trailer_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_14"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish"
+                            android:text="53"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:hint="@string/weight_hint"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:layout_height="45dp">
+
+                        <EditText
+                            android:id="@+id/weight_trailer_edittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:textSize="@dimen/text_14"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/spinner_custom_rectangle"
+                    android:layout_height="45dp">
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/post_age_spinner"
+                        android:layout_width="match_parent"
+                        android:theme="@style/Spinner2"
+                        android:popupBackground="@color/capture_content_color"
+                        android:backgroundTint="@color/white_greyish"
+                        android:spinnerMode="dropdown"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+                    <Button
+                        android:id="@+id/advance_filter_btn"
+                        android:layout_width="wrap_content"
+                        android:background="@color/transparent"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_16"
+                        android:text="Advance Filters"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:layout_alignParentLeft="true"
+                        android:layout_height="38dp"/>
+                    <Button
+                        android:id="@+id/apply_filters_btn"
+                        android:layout_width="95dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_16"
+                        android:text="Apply"
+                        android:textAllCaps="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="38dp"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+

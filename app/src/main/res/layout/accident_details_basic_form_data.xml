@@ -1,0 +1,729 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/capture_content_color">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_warning_black_24dp"
+                app:tint="@color/white_greyish" />
+            <TextView
+                android:id="@+id/header_text"
+                android:paddingTop="10dp"
+                android:textAllCaps="true"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_greyish"
+                android:text="@string/report_accident_incident"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_margin="10dp"
+        android:layout_below="@id/header_layout"
+        android:layout_above="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/capture_content_color_similar"
+            android:id="@+id/zoom_linear_layout"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:background="@color/capture_content_color_similar"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/capture_content_color_block">
+                        <TextView
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_greyish"
+                            android:padding="5dp"
+                            android:text="@string/accident_incident_details"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="15dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_greyish"
+                            android:textSize="@dimen/text_14"
+                            android:text="@string/i_am_reporting"/>
+
+                        <RadioGroup
+                            android:id="@+id/event_type_radio_button"
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/accident_radio_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:textSize="@dimen/text_14"
+                                android:textColor="@color/light_greyish"
+                                android:text="@string/an_accident"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="@dimen/text_12"
+                                android:textColor="@color/light_dark_grey"
+                                android:text="@string/accident_description"/>
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/incident_radio_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_14"
+                                android:textColor="@color/light_greyish"
+                                android:text="@string/an_incident"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textSize="@dimen/text_12"
+                                android:textColor="@color/light_dark_grey"
+                                android:text="@string/incident_description"/>
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/date"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="45dp">
+
+                                <EditText
+                                    android:id="@+id/accident_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:focusable="false"
+                                    android:inputType="none"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/error_accident_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_dark"
+                            android:textSize="@dimen/text_14"
+                            android:visibility="gone"
+                            android:text="@string/accident_date_required"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/time"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="45dp">
+
+                                <EditText
+                                    android:id="@+id/accident_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:focusable="false"
+                                    android:inputType="none"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/error_accident_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red_dark"
+                            android:textSize="@dimen/text_14"
+                            android:visibility="gone"
+                            android:text="@string/accident_time_required"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/accident_description_layout"
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:theme="@style/TextLabel"
+                                android:layout_height="100dp">
+
+<!--
+name,address and brandName
+android:inputType="textCapWords"
+android:imeOptions="actionNext"
+-->
+
+                                <EditText
+                                    android:gravity="top"
+                                    android:id="@+id/accident_description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/white_greyish"
+                                    android:hint="@string/description"
+                                    android:inputType="textCapSentences"
+                                    android:overScrollMode="always"
+                                    android:scrollbarStyle="insideInset"
+                                    android:scrollbars="vertical"
+                                    android:textSize="@dimen/text_14"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/type_view"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/spinner_custom_rectangle"
+                            android:layout_height="45dp">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:id="@+id/accident_type"
+                                android:text="@string/type"
+                                android:paddingLeft="@dimen/text_12"
+                                android:textSize="12sp"
+                                android:textColor="@color/white_greyish"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/light_greyish"
+                                android:textSize="@dimen/text_14"
+                                android:text="@string/on_private_property"/>
+                            <androidx.appcompat.widget.AppCompatCheckBox
+                                android:id="@+id/is_private_property_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="@color/light_greyish"
+                                android:text="@string/yes"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:background="@color/capture_content_color_block">-->
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textColor="@color/light_greyish"-->
+<!--                            android:padding="5dp"-->
+<!--                            android:text="@string/driver_details"/>-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:padding="15dp"-->
+<!--                        android:layout_height="match_parent">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content">-->
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:textColor="@color/light_greyish"-->
+<!--                                android:textSize="@dimen/text_14"-->
+<!--                                android:text="@string/driving_for_employer"/>-->
+<!--                            <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--                                android:id="@+id/has_employer_checkbox"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="20dp"-->
+<!--                                android:textColor="@color/light_greyish"-->
+<!--                                android:text="@string/yes"/>-->
+<!--                        </LinearLayout>-->
+
+
+<!--                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/driver_employer_block"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@color/capture_content_color_block">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/light_greyish"
+                                android:padding="5dp"
+                                android:text="@string/driver_details"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:padding="15dp"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/spinner_custom_rectangle">
+
+<!--                                &lt;!&ndash; INPUT &ndash;&gt;-->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:padding="5dp"
+                                    android:hint="@string/name"
+                                    android:theme="@style/CustomTextInput"
+                                    android:textColorHint="@color/light_greyish"
+                                    android:layout_height="45dp">
+
+                                    <EditText
+                                        android:inputType="textCapWords"
+                                        android:id="@+id/driver_employer_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/error_employer_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red_dark"
+                                android:textSize="@dimen/text_14"
+                                android:visibility="gone"
+                                android:text="@string/employer_name_required"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/spinner_custom_rectangle">
+
+<!--                                &lt;!&ndash; INPUT &ndash;&gt;-->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:padding="5dp"
+                                    android:hint="@string/phone_no"
+                                    android:theme="@style/CustomTextInput"
+                                    android:textColorHint="@color/light_greyish"
+                                    android:layout_height="45dp">
+
+                                    <com.vicmikhailau.maskededittext.MaskedEditText
+                                        android:hint="@string/phone_no"
+                                        app:mask="(###) ###-####"
+                                        android:id="@+id/driver_employer_phone_no"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:inputType="phone"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/error_employer_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red_dark"
+                                android:textSize="@dimen/text_14"
+                                android:visibility="gone"
+                                android:text="@string/employer_phone_required"/>
+
+
+
+
+                            <LinearLayout
+                                android:layout_marginTop="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:layout_marginRight="3dp"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/spinner_custom_rectangle">
+
+                                    <!-- INPUT -->
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:padding="5dp"
+                                        android:hint="@string/address"
+                                        android:theme="@style/CustomTextInput"
+                                        android:textColorHint="@color/light_greyish"
+                                        android:layout_height="40dp">
+
+                                        <EditText
+                                            android:inputType="textCapWords"
+                                            android:id="@+id/owner_address"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/white_greyish"
+                                            android:textSize="@dimen/text_14"
+                                            android:imeOptions="actionNext"
+                                            android:singleLine="true"
+                                            android:background="@color/transparent"
+                                            android:textColorHint="@color/light_greyish" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:layout_width="0dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="0.7"
+                                    android:layout_marginLeft="3dp"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/spinner_custom_rectangle">
+                                    <!-- INPUT -->
+
+                                    <TextView
+                                        android:layout_marginLeft="3dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:gravity="bottom"
+                                        android:text="@string/dob"
+                                        android:id="@+id/owner_dob"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="3"
+                                android:layout_marginTop="15dp"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:layout_marginRight="3dp"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/spinner_custom_rectangle">
+
+                                    <!-- INPUT -->
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:padding="5dp"
+                                        android:hint="@string/city"
+                                        android:theme="@style/CustomTextInput"
+                                        android:textColorHint="@color/light_greyish"
+                                        android:layout_height="40dp">
+
+                                        <EditText
+                                            android:inputType="textCapWords"
+
+                                            android:id="@+id/owner_city"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/white_greyish"
+                                            android:textSize="@dimen/text_14"
+                                            android:imeOptions="actionNext"
+                                            android:singleLine="true"
+                                            android:background="@color/transparent"
+                                            android:textColorHint="@color/light_greyish" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginRight="3dp"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/spinner_custom_rectangle">
+
+                                    <!-- INPUT -->
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:padding="5dp"
+                                        android:hint="@string/state"
+                                        android:theme="@style/CustomTextInput"
+                                        android:textColorHint="@color/light_greyish"
+                                        android:layout_height="40dp">
+
+                                        <EditText
+                                            android:id="@+id/owner_state"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/white_greyish"
+                                            android:textSize="@dimen/text_14"
+                                            android:imeOptions="actionNext"
+                                            android:singleLine="true"
+                                            android:inputType="textCapWords"
+                                            android:background="@color/transparent"
+                                            android:textColorHint="@color/light_greyish" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:layout_marginLeft="3dp"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/spinner_custom_rectangle">
+
+                                    <!-- INPUT -->
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:padding="5dp"
+                                        android:hint="@string/zipcode"
+                                        android:theme="@style/CustomTextInput"
+                                        android:textColorHint="@color/light_greyish"
+                                        android:layout_height="40dp">
+
+                                        <EditText
+                                            android:id="@+id/owner_zipcode"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@color/transparent"
+                                            android:imeOptions="actionNext"
+                                            android:inputType="textCapWords"
+                                            android:singleLine="true"
+                                            android:textColor="@color/white_greyish"
+                                            android:textColorHint="@color/light_greyish"
+                                            android:textSize="@dimen/text_14" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_marginTop="15dp"-->
+<!--                                android:background="@drawable/spinner_custom_rectangle">-->
+
+<!--&lt;!&ndash;                                &lt;!&ndash; INPUT &ndash;&gt;&ndash;&gt;-->
+<!--                                <com.google.android.material.textfield.TextInputLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:padding="5dp"-->
+<!--                                    android:hint="@string/insurance_provider"-->
+<!--                                    android:theme="@style/CustomTextInput"-->
+<!--                                    android:textColorHint="@color/light_greyish"-->
+<!--                                    android:layout_height="45dp">-->
+
+<!--                                    <EditText-->
+
+<!--                                        android:id="@+id/driver_employer_insurance_provider"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:textColor="@color/white_greyish"-->
+<!--                                        android:textSize="@dimen/text_14"-->
+<!--                                        android:imeOptions="actionNext"-->
+<!--                                        android:singleLine="true"-->
+<!--                                        android:background="@color/transparent"-->
+<!--                                        android:textColorHint="@color/light_greyish" />-->
+<!--                                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_marginTop="15dp"-->
+<!--                                android:background="@drawable/spinner_custom_rectangle">-->
+
+<!--&lt;!&ndash;                                &lt;!&ndash; INPUT &ndash;&gt;&ndash;&gt;-->
+<!--                                <com.google.android.material.textfield.TextInputLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:padding="5dp"-->
+<!--                                    android:hint="@string/insurance_policy_number"-->
+<!--                                    android:theme="@style/CustomTextInput"-->
+<!--                                    android:textColorHint="@color/light_greyish"-->
+<!--                                    android:layout_height="45dp">-->
+
+<!--                                    <EditText-->
+
+
+<!--                                        android:id="@+id/driver_employer_insurance_policy_number"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:textColor="@color/white_greyish"-->
+<!--                                        android:textSize="@dimen/text_14"-->
+<!--                                        android:imeOptions="actionDone"-->
+<!--                                        android:singleLine="true"-->
+<!--                                        android:inputType="number"-->
+<!--                                        android:background="@color/transparent"-->
+<!--                                        android:textColorHint="@color/light_greyish" />-->
+<!--                                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                            </LinearLayout>-->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/transparent"
+        android:text="@string/next_without_exclamation"
+        android:textSize="@dimen/text_18"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

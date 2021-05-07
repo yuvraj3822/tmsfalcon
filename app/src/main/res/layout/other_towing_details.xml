@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dimen_15"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/capture_content_color_block">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_greyish"
+            android:padding="5dp"
+            android:text="@string/towing_details"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_greyish"
+            android:textSize="@dimen/text_14"
+            android:text="@string/is_vehicle_towed"/>
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/is_towed_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/light_greyish"
+            android:text="@string/yes"/>
+    </LinearLayout>
+
+    <!--Towing Info Block Starts-->
+
+    <LinearLayout
+        android:id="@+id/tow_block"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/capture_content_color_block">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_greyish"
+                android:padding="5dp"
+                android:text="@string/tow_details"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/spinner_custom_rectangle">
+
+            <!-- INPUT -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:hint="@string/company_name"
+                android:theme="@style/CustomTextInput"
+                android:textColorHint="@color/light_greyish"
+                android:layout_height="40dp">
+
+                <EditText
+                    android:id="@+id/towing_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_14"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:inputType="textCapWords"
+                    android:background="@color/transparent"
+                    android:textColorHint="@color/light_greyish" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/spinner_custom_rectangle">
+
+            <!-- INPUT -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:hint="@string/phone_no"
+                android:theme="@style/CustomTextInput"
+                android:textColorHint="@color/light_greyish"
+                android:layout_height="40dp">
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/towing_company_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/light_greyish"
+                    android:inputType="numberSigned"
+                    android:background="@color/transparent"
+                    app:mask="(###)###-####" />
+
+
+                <!--                                <EditText-->
+                <!--                                    android:id="@+id/towing_company_phone"-->
+                <!--                                    android:layout_width="match_parent"-->
+                <!--                                    android:layout_height="wrap_content"-->
+                <!--                                    android:textColor="@color/white_greyish"-->
+                <!--                                    android:textSize="@dimen/text_14"-->
+                <!--                                    android:imeOptions="actionNext"-->
+                <!--                                    android:singleLine="true"-->
+                <!--                                    android:inputType="text"-->
+                <!--                                    android:background="@color/transparent"-->
+                <!--                                    android:textColorHint="@color/light_greyish" />-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_dark_grey"
+            android:text="@string/drug_text_mandatory"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

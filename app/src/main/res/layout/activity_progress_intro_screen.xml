@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/capture_content_color"
+   >
+
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/header_layout"
+                        android:background="@color/toolbar_background"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timeline_line"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:tint="@color/white_greyish"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_warning_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/header_text"
+                                android:paddingTop="10dp"
+                                android:textAllCaps="true"
+                                android:paddingBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white_greyish"
+                                android:text="@string/progress_report"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/timeline_line"/>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+        <!--                -->
+
+                        <com.akexorcist.roundcornerprogressbar.TextRoundCornerProgressBar
+                            android:id="@+id/progress_view"
+                            app:rcAnimationEnable="true"
+                            app:rcAnimationSpeedScale="2"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            app:rcBackgroundColor="@color/dashboard_block_background"
+                            app:rcBackgroundPadding="1dp"
+                            app:rcMax="100"
+                            app:rcProgress="0"
+                            app:rcTextPositionPriority="outside"
+                            app:rcProgressColor="@color/colorAccent"
+                            app:rcRadius="80dp"
+                            app:rcReverse="false"
+                            app:rcTextProgress="0"
+                            app:rcTextProgressSize="@dimen/text_11"
+                            app:rcTextProgressColor="@color/white_greyish" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/upload_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:background="@color/capture_content_color_similar"
+                            android:layout_margin="3dp"
+                            android:layout_height="40dp">
+                            <Button
+                                android:id="@+id/upload"
+                                android:layout_width="match_parent"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:textColor="@color/colorPrimary"
+                                android:background="@color/transparent"
+                                android:text="Upload"
+                                android:textSize="@dimen/text_16"
+                                android:textAllCaps="false"
+                                android:layout_marginBottom="10dp"
+                                android:layout_height="40dp"/>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                >
+                <LinearLayout
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+
+                        <RelativeLayout
+
+                            android:id="@+id/report_accident_view"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="5"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/image_report_accident"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ok_acc"
+                                android:visibility="visible" />
+
+                            <RelativeLayout
+                                android:layout_margin="8dp"
+                                android:background="@drawable/transparent_curved_border_outline"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <ImageView
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_width="75dp"
+                                        android:layout_height="75dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@drawable/accident_incident_icon"
+                                        android:visibility="visible" />
+
+<!--                                    accident_incident_detail-->
+                                    <TextView
+                                        android:id="@+id/accident_incident_detail"
+                                        android:layout_marginRight="@dimen/dimen_5"
+                                        android:layout_marginLeft="@dimen/dimen_5"
+                                        android:textSize="13sp"
+                                        android:gravity="center_horizontal"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/image_report_accident"
+                                        android:layout_marginTop="1dp"
+                                        android:text="@string/report_accident"
+                                        android:textColor="@color/white_greyish" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/other_accident_view"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="5"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/image_report_other_accident"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ok_acc"
+                                android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:background="@drawable/transparent_curved_border_outline"
+                            android:layout_margin="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:paddingBottom="@dimen/dimen_10"
+                                    android:paddingTop="@dimen/dimen_10"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/other_vehicles"
+                                    android:visibility="visible" />
+
+<!--                                add_vehicles-->
+                                <TextView
+                                    android:id="@+id/add_vehicles"
+                                    android:textSize="13sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/image_report_other_accident"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/add_vehicle"
+                                    android:textColor="@color/white_greyish" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+
+                        <RelativeLayout
+                            android:id="@+id/injuredperson"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="5"
+                            android:foreground="?android:attr/selectableItemBackground">
+                            <ImageView
+                                android:id="@+id/image_injured"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ok_acc"
+                                android:visibility="visible" />
+
+
+                        <RelativeLayout
+                            android:layout_margin="8dp"
+                            android:background="@drawable/transparent_curved_border_outline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+
+                                <RelativeLayout
+                                    android:gravity="center_horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_marginRight="@dimen/dimen_10"
+                                        android:id="@+id/image_injured_person"
+                                        android:paddingBottom="@dimen/dimen_10"
+                                        android:paddingTop="@dimen/dimen_10"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_width="50dp"
+                                        android:layout_height="75dp"
+                                        android:src="@drawable/patient"
+                                        />
+
+                                    <View
+                                        android:layout_centerVertical="true"
+                                        android:rotation="15"
+                                        android:layout_toRightOf="@+id/image_injured_person"
+                                        android:background="@color/white_greyish"
+                                        android:id="@+id/line"
+                                        android:layout_width="2dp"
+                                        android:layout_height="55dp"/>
+
+                                    <ImageView
+                                        android:layout_marginLeft="@dimen/dimen_10"
+                                        android:padding="@dimen/dimen_5"
+                                        android:layout_toRightOf="@+id/line"
+                                        android:id="@+id/image_property_damage"
+                                        android:paddingBottom="@dimen/dimen_10"
+                                        android:paddingTop="@dimen/dimen_10"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_width="50dp"
+                                        android:layout_height="75dp"
+                                        android:src="@drawable/property_damage"
+                                        />
+
+
+
+                                </RelativeLayout>
+
+<!--                                person_property_injured-->
+
+                                <TextView
+                                    android:layout_gravity="center_horizontal"
+                                    android:id="@+id/person_property_injured"
+                                    android:textSize="13sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/image_injured"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/injured_person_property_damage"
+                                    android:textColor="@color/white_greyish" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/witness_report"
+                            android:layout_width="0dp"
+
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="5"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/image_witness"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ok_acc"
+                                android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:layout_margin="8dp"
+                            android:background="@drawable/transparent_curved_border_outline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:paddingTop="@dimen/dimen_10"
+                                    android:paddingBottom="@dimen/dimen_10"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/witness_dash"
+                                    />
+<!--                                add_witness-->
+                                <TextView
+                                    android:id="@+id/add_witness"
+                                    android:textSize="13sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/image_witness"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/add_witness"
+                                    android:textColor="@color/white_greyish" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+
+                        <RelativeLayout
+                            android:id="@+id/photographic_evidence"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="5"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <ImageView
+                                android:id="@+id/image_photographic"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ok_acc"
+                                android:visibility="visible" />
+
+                            <RelativeLayout
+                            android:layout_margin="8dp"
+                            android:background="@drawable/transparent_curved_border_outline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:paddingBottom="@dimen/dimen_10"
+                                    android:paddingTop="@dimen/dimen_10"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/camera_dash"
+                                    />
+
+<!--                                photograph_evidence-->
+                                <TextView
+                                    android:id="@+id/photograph_evidence"
+                                    android:textSize="13sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/image_photographic"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/photographic_evidence"
+                                    android:textColor="@color/white_greyish" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/sign_report"
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_weight="5"
+                            android:alpha="0.3"
+                            android:background="@drawable/transparent_curved_border_outline">
+
+                            <ImageView
+                                android:id="@+id/image_sign_report"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ok_acc"
+                                android:visibility="visible" />
+
+                            <RelativeLayout
+                            android:layout_margin="8dp"
+                            android:background="@drawable/transparent_curved_border_outline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <ImageView
+                                    android:paddingTop="@dimen/dimen_10"
+                                    android:paddingBottom="@dimen/dimen_10"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/contract" />
+
+                                <TextView
+                                    android:textSize="13sp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:id="@+id/text_sign"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/image_sign_report"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/sign_and_upload"
+                                    android:textColor="@color/white_greyish" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <RelativeLayout
+                android:id="@+id/succful_view"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/text_25"
+                    android:textColor="@color/colorAccent"
+                    android:text="Thank you!!"
+                    android:id="@+id/thankyou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dimen_13"
+                    android:layout_below="@+id/thankyou"
+                    android:textSize="@dimen/text_20"
+                    android:gravity="center"
+                    android:textColor="@color/white_greyish"
+                    android:text="Your report has been updated successfully."
+                    android:id="@+id/msg_succesful"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

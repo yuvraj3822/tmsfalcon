@@ -1,0 +1,225 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+apply plugin: "org.sonarqube"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Tmsfalcon"
+        property "sonar.projectKey", "Tmsfalcon"
+        property "sonar.sources", "src/main/java"
+        property "sonar.language", "java"
+        property "sonar.sourceEncoding", "UTF-8"
+//      property "sonar.exclusions", "src/main/java/com/foo/Foo.java"
+    }
+}
+android {
+    compileSdkVersion 29
+    //buildToolsVersion "26.0.1"
+    dexOptions {
+        preDexLibraries = false
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.tmsfalcon.device.tmsfalcon"
+        multiDexEnabled true
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 17
+        versionName "2.2"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        ndk
+            {
+                moduleName "Scanner"
+//                abiFilters "armeabi", "armeabi-v7a", "x86", "mips", "x86_64", "arm64-v8a"
+            }
+    }
+
+    sourceSets.main
+            {
+                jni.srcDirs = []
+                jniLibs.srcDir 'src/main/libs'
+            }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            /* minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'*/
+
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            // minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            //  shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+
+        /*debug {
+            minifyEnabled true
+            //proguardFile 'proguard-android.txt'
+            zipAlignEnabled true
+        }*/
+
+    }
+}
+repositories {
+    maven {
+        url "http://dl.bintray.com/lukaville/maven"
+    }
+
+    maven { url "https://dl.bintray.com/terrakok/terramaven" }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    implementation('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+//        transitive = true;
+//    }
+    /*compile 'com.github.qiugang:EditTag:v1.2.3'*/
+
+
+    implementation project(':scanlibrary')
+
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation 'com.github.HamidrezaAmz:MagicalExoPlayer:1.0.16'
+
+    /**
+     * gallery and camera
+     */
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+
+    //implementation  'info.hoang8f:fbutton:1.0.5'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    /* compile 'com.squareup.picasso:picasso:2.5.2'*/
+    implementation 'com.github.barteksc:android-pdf-viewer:2.7.0-beta.1'
+    implementation 'com.wdullaer:materialdatetimepicker:1.4.2'
+    implementation 'com.nbsp:library:1.8'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.7'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit-converters:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.github.mabbas007:TagsEditText:1.0.5'
+    implementation 'com.otaliastudios:autocomplete:1.0.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.0'
+    implementation 'com.github.vipulasri:timelineview:1.0.6'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+//    15.0.2
+    implementation 'com.google.firebase:firebase-core:18.0.2'
+//    15.0.2
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    /* https://github.com/jhansireddy/AndroidScannerDemo */
+
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    implementation 'com.github.florent37:viewtooltip:1.1.5'
+
+    /*compile 'com.github.bumptech.glide:glide:4.8.0'*/
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    implementation 'com.mindorks.android:prdownloader:0.5.0'
+    //https://github.com/MindorksOpenSource/PRDownloader
+
+    implementation 'io.sentry:sentry-android:1.7.16'
+
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    implementation 'com.github.jeancsanchez:JcPlayer:2.6.15'
+
+    implementation project(':openCVLibrary340')
+
+    implementation 'androidx.browser:browser:1.0.0'
+
+    implementation 'com.github.smarteist:autoimageslider:1.3.2-appcompat'
+
+    implementation 'com.thomashaertel:multispinner:0.1.1@aar'
+
+    implementation 'com.github.Liocoder24x7:Advanced-Spinner:v1.0'
+
+    implementation 'org.jsoup:jsoup:1.8.3'
+
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+    implementation 'com.microsoft.azure.android:azure-storage-android:2.0.0@aar'
+
+    /**
+     * MaskEditText (XXX) XXX-XXXX
+     */
+    implementation 'com.vicmikhailau:MaskedEditText:3.1.1'
+//    implementation 'com.github.reinaldoarrosi:maskededittext:1.1.0'
+
+
+
+
+    /**
+     * Room dependency
+     */
+    implementation 'androidx.room:room-runtime:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+    /**
+     * Kotlin Couroutine
+     */
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+    kapt 'androidx.room:room-compiler:2.2.5'
+
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+
+    /**
+     * Progress bar
+     */
+
+    implementation 'com.akexorcist:round-corner-progress-bar:2.1.1'
+
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android-extensions'
+

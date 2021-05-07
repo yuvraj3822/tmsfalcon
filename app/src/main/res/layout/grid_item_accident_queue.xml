@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left"
+    android:background="@color/capture_content_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/first_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/img_layout"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/blue_border_outline"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/single_image"
+                android:src="@drawable/no_image"
+                android:layout_width="100dp"
+                android:layout_height="150dp" />
+
+            <ImageView
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/ic_play"
+                android:layout_centerInParent="true"
+                android:id="@+id/play_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_margin="3dp"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_9"
+                android:text="time"
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/doc_type"
+                android:gravity="center_horizontal"
+                android:layout_below="@id/single_image"
+                android:layout_width="100dp"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_greyish"
+                android:text="demo doc"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/delete_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingRight="-4dp"
+            android:layout_toRightOf="@+id/img_layout"
+            android:layout_gravity="right"
+            android:src="@drawable/delete" />
+    </FrameLayout>
+
+</RelativeLayout>

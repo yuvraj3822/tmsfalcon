@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/dashboard_toolbar_background"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/toolbar_logo"/>
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_18"
+                    android:text="Dashboard"/>-->
+                <RelativeLayout
+                    android:id="@+id/bell_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@+id/toolbar_logo">
+
+                    <include
+                        android:id="@+id/bell_icon_custom"
+                        layout="@layout/custom_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/crop_rotate" />
+                    <ImageView
+                        android:id="@+id/crop_rotate"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/crop_rotate"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/back_btn"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/back" />
+                    <!-- <ImageView
+                         android:id="@+id/bell_icon"
+                         android:layout_centerVertical="true"
+                         android:layout_width="wrap_content"
+                         android:src="@drawable/bell_new"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginRight="20dp"
+                         android:layout_height="wrap_content" />-->
+                </RelativeLayout>
+            </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+</RelativeLayout>

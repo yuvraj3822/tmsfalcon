@@ -1,0 +1,372 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+   <!-- <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/capture_content_color"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/toolbar_capture_document"/>
+    </LinearLayout>-->
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:background="@color/capture_content_color"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/timeline_line"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/header_icon"
+                    android:layout_width="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/header_day_off_icon" />
+                <TextView
+                    android:id="@+id/header_text"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="true"
+                    android:layout_toRightOf="@+id/header_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white_greyish"
+                    android:text="@string/request_day_off"/>
+                <Button
+                    android:id="@+id/view"
+                    android:padding="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/show_requests"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textColor="@color/crop_border_color"
+                    android:background="@drawable/button_background_overall"
+                    android:layout_height="34dp"
+                    android:textAllCaps="false"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/timeline_line"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/days_off"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_16" />
+
+                    <RadioGroup
+                        android:id="@+id/days_off_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/custom_switch_outline"
+                        android:checkedButton="@+id/multiple_day_off"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/single_day_off"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/toggle_widget_background"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/single"
+                            android:textColor="@color/white" />
+
+                        <RadioButton
+                            android:id="@+id/multiple_day_off"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/toggle_widget_background"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/multiple"
+                            android:textColor="@color/white" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/date_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/select_start_date"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_16" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/end_date_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/end_date"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_16" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/reason_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/enter_reason"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/light_greyish"
+                        android:textSize="@dimen/text_16" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:animateLayoutChanges="true"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/single_day_off_lyout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/is_half_full_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/day_off_type"
+                                android:textColor="@color/white_greyish"
+                                android:textSize="@dimen/text_16" />
+
+                            <RadioGroup
+                                android:id="@+id/is_full_off"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/custom_switch_outline"
+                                android:checkedButton="@+id/half_off"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/full_off"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginLeft="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@drawable/toggle_widget_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="@string/full_day"
+                                    android:textColor="@color/white" />
+
+                                <RadioButton
+                                    android:id="@+id/half_off"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginRight="1dp"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@drawable/toggle_widget_background"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="@string/half_day"
+                                    android:textColor="@color/white" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/time_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/start_time_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/TextLabel"
+                                app:errorEnabled="true">
+
+                                <EditText
+                                    android:id="@+id/start_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:hint="@string/start_time"
+                                    android:inputType="none"
+                                    android:textColor="@color/light_greyish"
+                                    android:textSize="@dimen/text_16" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/end_time_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/TextLabel"
+                                app:errorEnabled="true">
+
+                                <EditText
+                                    android:id="@+id/end_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:hint="@string/end_time"
+                                    android:inputType="none"
+                                    android:textColor="@color/light_greyish"
+                                    android:textSize="@dimen/text_16" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/submit_layout"
+                        android:animateLayoutChanges="true"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/submit"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/button_background_overall"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:text="@string/submit_text"
+                            android:textAllCaps="false"
+                            android:textColor="@color/crop_border_color"
+                            android:textSize="@dimen/text_16" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

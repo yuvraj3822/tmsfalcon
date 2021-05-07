@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@color/capture_content_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout
+            android:background="@color/capture_content_color_similar"
+            android:id="@+id/zoom_linear_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_margin="7dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/capture_content_color_block">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/light_greyish"
+                        android:padding="5dp"
+                        android:text="@string/truck_details"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:background="@drawable/spinner_custom_rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_height="45dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:hint="@string/truck_unit_no"
+                        android:theme="@style/CustomTextInput"
+                        android:textColorHint="@color/light_greyish"
+                        android:layout_height="40dp">
+
+                        <EditText
+                            android:id="@+id/truck_unit_no_dialog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_14"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:inputType="date"
+                            android:background="@color/transparent"
+                            android:textColorHint="@color/light_greyish" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <TextView-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:text="Truck Unit No"-->
+<!--                        android:textColor="@color/white_greyish"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:id="@+id/truck_unit_no"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_marginRight="3dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_custom_rectangle">
+
+                        <!-- INPUT -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:hint="@string/vehicle_year"
+                            android:theme="@style/CustomTextInput"
+                            android:textColorHint="@color/light_greyish"
+                            android:layout_height="40dp">
+
+                            <EditText
+                                android:id="@+id/truck_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white_greyish"
+                                android:textSize="@dimen/text_14"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:inputType="date"
+                                android:background="@color/transparent"
+                                android:textColorHint="@color/light_greyish" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="3dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_custom_rectangle">
+
+                        <!-- INPUT -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:hint="@string/vehicle_make"
+                            android:theme="@style/CustomTextInput"
+                            android:textColorHint="@color/light_greyish"
+                            android:layout_height="40dp">
+
+                            <EditText
+                                android:id="@+id/truck_make"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white_greyish"
+                                android:textSize="@dimen/text_14"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:background="@color/transparent"
+                                android:textColorHint="@color/light_greyish" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginRight="3dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/license_number"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/truck_license_no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapCharacters"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="3dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/license_plate_state"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/truck_license_state"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapCharacters"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/capture_content_color_block">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_greyish"
+                            android:padding="5dp"
+                            android:text="@string/trailer_details"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:background="@drawable/spinner_custom_rectangle"
+                        android:padding="@dimen/dimen_5"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/vehicle_unit_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_marginRight="3dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/vehicle_year"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/vehicle_year"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="date"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="3dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/vehicle_make"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/vehicle_make"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/spinner_custom_rectangle">
+
+                        <!-- INPUT -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:hint="@string/dot_number"
+                            android:theme="@style/CustomTextInput"
+                            android:textColorHint="@color/light_greyish"
+                            android:layout_height="40dp">
+
+                            <EditText
+                                android:id="@+id/vehicle_dot_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white_greyish"
+                                android:textSize="@dimen/text_14"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:inputType="number"
+                                android:background="@color/transparent"
+                                android:textColorHint="@color/light_greyish" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/spinner_custom_rectangle">
+
+                                <!-- INPUT -->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:padding="5dp"
+                                    android:hint="@string/license_number"
+                                    android:theme="@style/CustomTextInput"
+                                    android:textColorHint="@color/light_greyish"
+                                    android:layout_height="40dp">
+
+                                    <EditText
+                                        android:id="@+id/vehicle_license_no"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:inputType="textCapCharacters"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/error_vehicle_license_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red_dark"
+                                android:textSize="@dimen/text_14"
+                                android:visibility="gone"
+                                android:text="@string/vehicle_license_no_required"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="3dp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/spinner_custom_rectangle">
+
+                                <!-- INPUT -->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:padding="5dp"
+                                    android:hint="@string/license_plate_state"
+                                    android:theme="@style/CustomTextInput"
+                                    android:textColorHint="@color/light_greyish"
+                                    android:layout_height="40dp">
+
+                                    <EditText
+                                        android:id="@+id/vehicle_license_state"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:inputType="textCapCharacters"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/error_vehicle_license_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red_dark"
+                                android:textSize="@dimen/text_14"
+                                android:visibility="gone"
+                                android:text="@string/vehicle_license_state_required"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <include layout="@layout/insurance_view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/capture_content_color_similar"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/capture_content_color_block">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_greyish"
+                            android:padding="5dp"
+                            android:text="@string/vehicle_owner_details"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_greyish"
+                            android:textSize="@dimen/text_14"
+                            android:text="@string/same_as_driver"/>
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/same_as_driver_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/light_greyish"
+                            android:text="@string/yes"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:layout_marginRight="3dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/spinner_custom_rectangle">
+
+                                <!-- INPUT -->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:padding="5dp"
+                                    android:hint="@string/name"
+                                    android:theme="@style/CustomTextInput"
+                                    android:textColorHint="@color/light_greyish"
+                                    android:layout_height="40dp">
+
+                                    <EditText
+                                        android:id="@+id/owner_first_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:inputType="textCapWords"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.7"
+                                android:layout_marginLeft="3dp"
+                                android:orientation="vertical"
+                                android:background="@drawable/spinner_custom_rectangle">
+
+                                <!-- INPUT -->
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:padding="5dp"
+                                    android:hint="@string/phone_no"
+                                    android:theme="@style/CustomTextInput"
+                                    android:textColorHint="@color/light_greyish"
+                                    android:layout_height="40dp">
+
+                                    <com.vicmikhailau.maskededittext.MaskedEditText
+                                        app:mask="(###) ###-####"
+                                        android:id="@+id/owner_phone_no"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white_greyish"
+                                        android:textSize="@dimen/text_14"
+                                        android:imeOptions="actionNext"
+                                        android:singleLine="true"
+                                        android:inputType="numberSigned"
+                                        android:background="@color/transparent"
+                                        android:textColorHint="@color/light_greyish" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/address"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/owner_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapWords"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="3dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+<!--                            <com.google.android.material.textfield.TextInputLayout-->
+<!--                                android:id="@+id/birthdateview"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:padding="5dp"-->
+<!--                                android:hint="@string/dob"-->
+<!--                                android:theme="@style/CustomTextInput"-->
+<!--                                android:textColorHint="@color/light_greyish"-->
+<!--                                android:layout_height="40dp">-->
+
+                                <TextView
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="bottom"
+                                    android:text="@string/dob"
+                                    android:editable="false"
+                                    android:id="@+id/owner_dob"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="number"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+<!--                            </com.google.android.material.textfield.TextInputLayout>-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="3"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/city"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+
+                                    android:id="@+id/owner_city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapWords"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/state"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/owner_state"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapWords"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="3dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/zipcode"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/owner_zipcode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapWords"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_greyish"
+                            android:textSize="@dimen/text_14"
+                            android:text="@string/is_vehicle_towed"/>
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/is_towed_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/light_greyish"
+                            android:text="@string/yes"/>
+                    </LinearLayout>
+
+                    <!--Towing Info Block Starts-->
+
+                    <LinearLayout
+                        android:id="@+id/tow_block"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/capture_content_color_block">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/light_greyish"
+                                android:padding="5dp"
+                                android:text="@string/tow_details"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <!-- INPUT -->
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/company_name"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                                android:layout_height="40dp">
+
+                                <EditText
+                                    android:id="@+id/towing_company_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white_greyish"
+                                    android:textSize="@dimen/text_14"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:inputType="textCapWords"
+                                    android:background="@color/transparent"
+                                    android:textColorHint="@color/light_greyish" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/spinner_custom_rectangle">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:padding="5dp"
+                                android:hint="@string/phone_no"
+                                android:theme="@style/CustomTextInput"
+                                android:textColorHint="@color/light_greyish"
+                               android:layout_height="40dp">
+                            <com.vicmikhailau.maskededittext.MaskedEditText
+                                android:id="@+id/towing_company_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textColor="@color/light_greyish"
+                                android:inputType="numberSigned"
+                                android:background="@color/transparent"
+                                app:mask="(###) ###-####" />
+
+
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <!-- INPUT -->
+<!--                            <com.google.android.material.textfield.TextInputLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:padding="5dp"-->
+<!--                                android:hint="@string/phone_no"-->
+<!--                                android:theme="@style/CustomTextInput"-->
+<!--                                android:textColorHint="@color/light_greyish"-->
+<!--                                android:layout_height="40dp">-->
+
+<!--&lt;!&ndash;                                <com.vicmikhailau.maskededittext.MaskedEditText&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textColor="@color/white_greyish"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textSize="@dimen/text_14"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:imeOptions="actionNext"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:singleLine="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:inputType="phone"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:background="@color/transparent"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textColorHint="@color/light_greyish" />&ndash;&gt;-->
+
+
+<!--                             -->
+
+<!--                            </com.google.android.material.textfield.TextInputLayout>-->
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/light_dark_grey"
+                            android:text="@string/drug_text_mandatory"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/add_vehicle_detail"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/green_dark"
+                    android:textColor="@android:color/white"
+                    android:text="Add" />
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/status_red"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:text="Cancel" />
+
+            </LinearLayout>
+
+
+        </com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

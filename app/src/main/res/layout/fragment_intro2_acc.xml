@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+    <!-- <include
+         android:id="@+id/toolbar"
+         layout="@layout/toolbar_capture_document"/>-->
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/next_btn"
+        android:background="@color/capture_content_color_similar"
+        android:id="@+id/zoom_linear_layout"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/call_layout"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/circle_filled"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/ic_call_white_24dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/ripple_circle_border"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/call_screen_number_text_size"
+                        android:textColor="@color/blue_logo"
+                        android:text="@string/nine"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ripple_circle_border"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/call_screen_number_text_size"
+                        android:textColor="@color/blue_logo"
+                        android:text="@string/one"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ripple_circle_border"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/call_screen_number_text_size"
+                        android:textColor="@color/blue_logo"
+                        android:text="@string/one"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_25"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/call_911"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/light_greyish"
+                android:textSize="@dimen/text_16"
+                android:textAlignment="center"
+                android:text="@string/accident_module_screen_two_line_one"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/step_four"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_greyish"
+                android:textSize="@dimen/text_16"
+                android:textAlignment="center"
+                android:text="@string/accident_module_screen_two_line_two"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/light_greyish"
+                android:textSize="@dimen/text_16"
+                android:textAlignment="center"
+                android:text="@string/accident_module_screen_two_line_three"/>
+
+        </LinearLayout>
+    </com.tmsfalcon.device.tmsfalcon.customtools.ZoomLinearLayout>
+
+
+</RelativeLayout>

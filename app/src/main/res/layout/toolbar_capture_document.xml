@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/toolbar_background"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:id="@+id/toolbar_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/toolbar_logo"/>
+    <ImageView
+        android:id="@+id/rotate"
+        android:layout_centerVertical="true"
+        android:layout_width="30dp"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/light_off"
+        android:src="@drawable/ic_rotate"
+        android:layout_height="25dp" />
+    <ImageView
+        android:id="@+id/light_off"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/light_on"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/headlight_off"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/light_on"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/headlight"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/bell_layout"
+        android:layout_height="wrap_content" />
+
+   <!-- <ImageView
+        android:id="@+id/bell_icon"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/bell_new"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/back_btn"
+        android:layout_height="wrap_content" />-->
+    <RelativeLayout
+        android:id="@+id/bell_layout"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/back_btn"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/custom_badge"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/back"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

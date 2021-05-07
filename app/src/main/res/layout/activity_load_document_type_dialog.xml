@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    tools:context="com.tmsfalcon.device.tmsfalcon.activities.DialogActivity"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@color/capture_content_color"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Spinner
+                android:id="@+id/select_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
+            <!--<EditText
+                android:id="@+id/select_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_18"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="@string/select_document_type"/>-->
+
+            <View
+                android:id="@+id/line"
+                android:layout_below="@+id/select_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/timeline_line"/>
+            <RadioGroup
+                android:layout_below="@+id/line"
+                android:id="@+id/radioDocumentType"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content" >
+            </RadioGroup>
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_below="@+id/radioDocumentType"
+                android:layout_width="wrap_content"
+                android:text="@string/next"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_18"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</ScrollView>
+
+
+
+

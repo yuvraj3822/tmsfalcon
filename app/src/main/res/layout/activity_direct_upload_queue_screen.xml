@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/capture_content_color"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/margin_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+<!--<include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar_capture_document"/>-->
+    <ProgressBar
+        android:id="@+id/temp_progress"
+        android:visibility="gone"
+        android:backgroundTint="@color/white_greyish"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_below="@id/margin_view"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center"
+        android:weightSum="3"
+        android:background="@color/progress_background_layout"
+        android:layout_height="wrap_content">
+        <com.tmsfalcon.device.tmsfalcon.widgets.TextProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:maxHeight="13dip"
+            android:minHeight="13dip"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressTint="@color/colorPrimary"
+            android:progressBackgroundTint="@color/progress_unfilled"
+            android:layout_width="0dp"
+            android:layout_weight="2.8"
+            android:progress="0"
+            android:background="@drawable/progress_background"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/upload_cancel"
+            android:src="@drawable/uplaod_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/progress_layout"
+        android:layout_above="@+id/bottom_layout"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_height="match_parent">
+        <!--<LinearLayout
+            android:id="@+id/add_more"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/add_more_images"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center|right"
+                android:padding="8dp"
+                android:background="@drawable/button_background_overall"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/text_16"
+                    android:text="@string/add_new"/>
+                <ImageView
+                    android:id="@+id/add_img"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add"/>
+
+            </LinearLayout>
+        </LinearLayout>-->
+        <GridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:horizontalSpacing="8dp"
+            android:verticalSpacing="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:stretchMode="columnWidth" >
+        </GridView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/bottom_layout"
+    android:layout_width="match_parent"
+    android:background="@color/toolbar_background"
+    android:layout_alignParentBottom="true"
+    android:layout_height="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/send_to_upload_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/send_distacher_img"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/upload"/>
+            <TextView
+                android:layout_toRightOf="@id/send_distacher_img"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:text="@string/upload"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/email_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/email_icon"/>
+            <TextView
+                android:layout_toRightOf="@id/add_img"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:text="@string/email"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fax_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/fax_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fax_icon"/>
+            <TextView
+                android:layout_toRightOf="@id/fax_icon"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:text="@string/fax_icon"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+</RelativeLayout>

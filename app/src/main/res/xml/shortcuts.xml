@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="loads"
+        android:enabled="true"
+        android:icon="@drawable/shortcut_loads_icon"
+        android:shortcutShortLabel="@string/my_loads"
+        android:shortcutLongLabel="@string/my_loads"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.tmsfalcon.device.tmsfalcon"
+            android:targetClass="com.tmsfalcon.device.tmsfalcon.activities.LoadsActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="make_a_call"
+        android:enabled="true"
+        android:icon="@drawable/shortcut_call_icon"
+        android:shortcutShortLabel="@string/make_a_call"
+        android:shortcutLongLabel="@string/make_a_call"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.tmsfalcon.device.tmsfalcon"
+            android:targetClass="com.tmsfalcon.device.tmsfalcon.activities.PhoneActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="capture_document"
+        android:enabled="true"
+        android:icon="@drawable/shortcut_document_icon"
+        android:shortcutShortLabel="@string/capture_document"
+        android:shortcutLongLabel="@string/capture_document"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.tmsfalcon.device.tmsfalcon"
+            android:targetClass="com.tmsfalcon.device.tmsfalcon.activities.directUploadModule.DirectUploadCameraScreen" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

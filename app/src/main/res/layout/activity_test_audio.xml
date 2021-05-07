@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/capture_content_color"
+    tools:context="com.tmsfalcon.device.tmsfalcon.activities.TestAudio">
+
+    <com.example.jean.jcplayer.view.JcPlayerView
+        android:id="@+id/jcplayer"
+        android:layout_centerInParent="true"
+        app:play_icon_color="@color/white_greyish"
+        app:previous_icon_color="@color/white_greyish"
+        app:next_icon_color="@color/white_greyish"
+        app:pause_icon_color="@color/white_greyish"
+        app:progress_color="@color/white_greyish"
+        app:random_icon_color="@color/white_greyish"
+        app:repeat_icon_color="@color/white_greyish"
+        app:repeat_one_icon_color="@color/white_greyish"
+        app:seek_bar_color="@color/white_greyish"
+        app:text_audio_current_duration_color="@color/white_greyish"
+        app:text_audio_duration_color="@color/white_greyish"
+        app:text_audio_title_color="@color/white_greyish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

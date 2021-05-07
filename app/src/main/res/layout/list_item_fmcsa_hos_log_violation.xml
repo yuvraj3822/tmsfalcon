@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/detail_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:background="@drawable/curved_top_shape"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/report_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:textColor="@color/white_greyish"
+                    android:textSize="@dimen/text_16"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/curved_bottom_shape"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="@string/state"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_10"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/state_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_14"
+                            android:textColor="@color/white_greyish"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="@string/location"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_10"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/location_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_14"
+                            android:textColor="@color/white_greyish"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="@string/section"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_10"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/section_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_14"
+                            android:textColor="@color/white_greyish"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="@string/date_time"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_10"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/date_time_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_14"
+                            android:textColor="@color/white_greyish"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vehicle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="@string/resource_type"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_10"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/resource_type_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_14"
+                            android:textColor="@color/white_greyish"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="@string/unit_no"
+                            android:textColor="@color/white_greyish"
+                            android:textSize="@dimen/text_10"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/unit_no_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/text_14"
+                            android:textColor="@color/white_greyish"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/description"
+                        android:textColor="@color/white_greyish"
+                        android:textSize="@dimen/text_10"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/description_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/text_14"
+                        android:textColor="@color/white_greyish"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

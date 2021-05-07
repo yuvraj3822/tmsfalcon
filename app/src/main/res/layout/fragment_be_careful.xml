@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.kotlinWork.AccidentModule.BeCareful">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<!--    <TextView-->
+<!--        android:layout_marginTop="45dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textSize="@dimen/text_24"-->
+<!--        android:textColor="@color/white_greyish"-->
+<!--        android:text="Its important "-->
+<!--        android:id="@+id/heading_introView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+
+    <TextView
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/text_18"
+        android:textColor="@color/white_greyish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Before you go to have the picture of the scene.\n \nBe sure that you are at safe area!" />
+
+</RelativeLayout>

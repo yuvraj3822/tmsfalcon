@@ -1,0 +1,60 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/blue_tab"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:background="@color/progress_background_layout"
+        android:layout_height="wrap_content">
+        <com.tmsfalcon.device.tmsfalcon.widgets.TextProgressBar
+            android:id="@+id/progress_bar_percent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:maxHeight="13dip"
+            android:minHeight="13dip"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressTint="@color/colorPrimary"
+            android:progressBackgroundTint="@color/progress_unfilled"
+            android:layout_width="match_parent"
+            android:progress="1"
+            android:background="@drawable/progress_background"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/docListView"
+        android:layout_below="@id/progress_layout"
+        android:layout_marginTop="10dp"
+        android:divider="@color/timeline_line"
+        android:dividerHeight="1.0sp"
+        android:nestedScrollingEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/no_data_textview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/white_greyish"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_available"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+

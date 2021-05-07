@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/capture_content_color"
+    android:layout_height="match_parent">
+    <!--<include android:id="@+id/toolbar"
+        layout="@layout/toolbar_capture_document"/>-->
+<!--    android:background="@color/blue_tab"-->
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:weightSum="2"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/header_truck_icon" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:textAllCaps="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/text_15"
+                android:textColor="@color/white_greyish"
+                android:layout_height="wrap_content"
+                android:text="@string/my_loads"/>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tabs"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+
+            app:tabTextAppearance="@style/TripTabLayoutStyle"
+            app:tabMode="fixed"
+
+
+            app:tabTextColor="@color/white_greyish"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabGravity="center"/>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_below="@+id/tab_layout"
+        android:background="@color/white_greyish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/no_data_textview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/white_greyish"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_available"
+        android:visibility="gone"/>
+</RelativeLayout>

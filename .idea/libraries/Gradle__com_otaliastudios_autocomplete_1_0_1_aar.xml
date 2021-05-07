@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.otaliastudios:autocomplete:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b666d2eb4b269423ce43c78b17434cb9/jetified-autocomplete-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b666d2eb4b269423ce43c78b17434cb9/jetified-autocomplete-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b666d2eb4b269423ce43c78b17434cb9/jetified-autocomplete-1.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.otaliastudios/autocomplete/1.0.1/52c8c4b7120ef46df042da4c283c88dbfdc00169/autocomplete-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.otaliastudios/autocomplete/1.0.1/7a4c834effd2f04ccfca62f347a90212f4e34c1f/autocomplete-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/capture_content_color">
+    <!--<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_capture_document"/>-->
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:background="@color/toolbar_background"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/header_document_request_icon" />
+            <TextView
+                android:id="@+id/header_text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textAllCaps="true"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_greyish"
+                android:text="@string/rejected_document_overview"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/timeline_line"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_below="@+id/header_layout"
+        android:visibility="gone"
+        android:background="@color/progress_background_layout"
+        android:layout_height="wrap_content">
+        <com.tmsfalcon.device.tmsfalcon.widgets.TextProgressBar
+            android:id="@+id/progress_bar_percent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:maxHeight="13dip"
+            android:minHeight="13dip"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressTint="@color/colorPrimary"
+            android:progressBackgroundTint="@color/progress_unfilled"
+            android:layout_width="match_parent"
+            android:progress="1"
+            android:background="@drawable/progress_background"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/progress_layout"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@drawable/transparent_curved_border_outline"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/name"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/document_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/document_type"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/document_type"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/document_code"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/code"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/document_due_date"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/document_due_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/rejected_on"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/rejected_on"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/rejected_reason"
+                android:textColor="@color/blue_logo"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/rejected_reason"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white_greyish"
+                android:textSize="@dimen/text_14"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/view_btn"
+                    android:layout_width="100dp"
+                    android:background="@drawable/transparent_curved_border_outline"
+                    android:text="@string/view"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue_logo"
+                    android:textSize="@dimen/text_16"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/renew_btn"
+                    android:layout_width="100dp"
+                    android:textColor="@color/blue_logo"
+                    android:textSize="@dimen/text_16"
+                    android:text="@string/renew"
+                    android:textAllCaps="false"
+                    android:background="@drawable/transparent_curved_border_outline"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_data_textview"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/white_greyish"
+        android:layout_height="wrap_content"
+        android:text="@string/no_contacts_found"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
